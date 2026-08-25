@@ -1,6 +1,15 @@
 @echo off
 echo === Kahaanist Website Publisher ===
 echo.
+echo Running automated pre-deployment checks...
+node test_suite.js
+if %errorlevel% neq 0 (
+    echo.
+    echo ❌ Publishing aborted due to errors. Please fix them before publishing.
+    pause
+    exit /b %errorlevel%
+)
+echo.
 echo This script will save a version of your website and publish it to the live server.
 echo (You can always revert to older versions later if needed).
 echo.
