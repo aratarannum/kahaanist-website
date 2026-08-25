@@ -475,13 +475,13 @@
 <script>
   // ---------- Product data ----------
   const products = [
-    { cat:'neckpieces', name:'Tree of Life Pendant Necklace', price:'₹2,450', quote:'Roots below, branches above — grounded and growing at once.', img:'tree-of-life-main.jpg', checkout:'https://your-shopify-store.myshopify.com/cart/12345' },
-    { cat:'neckpieces', name:'Mermen in Love Pendant', price:'₹2,100', quote:'Eternal devotion beneath the waves.', img:'mermen-in-love.png', checkout:'https://your-shopify-store.myshopify.com/cart/12345' },
-    { cat:'earrings', name:'Medusa Brass Earrings', price:'₹1,850', quote:'A gaze that stops time.', img:'medusa-earrings.jpg', checkout:'https://your-shopify-store.myshopify.com/cart/12345' },
-    { cat:'earrings', name:'Mermaids in Love Earrings', price:'₹1,950', quote:'A subtle nod to infinite romance.', checkout:'https://your-shopify-store.myshopify.com/cart/12345' },
-    { cat:'earrings', name:'Tree of Life Drop Earrings', price:'₹1,150', quote:'Carry the whole tree with you.', checkout:'https://your-shopify-store.myshopify.com/cart/12345' },
-    { cat:'rings', name:'Ouroboros Band Ring', price:'₹1,100', quote:'A cycle you wear, not just believe in.', checkout:'https://your-shopify-store.myshopify.com/cart/12345' },
-    { cat:'rings', name:'Medusa Signet Ring', price:'₹1,350', quote:'Small enough for daily wear, sharp enough to notice.', checkout:'https://your-shopify-store.myshopify.com/cart/12345' }
+    { cat:'neckpieces', name:'Tree of Life Pendant Necklace', price:'₹2,899', quote:'Roots below, branches above — grounded and growing at once.', img:'tree-of-life-main.jpg', checkout:'https://your-shopify-store.myshopify.com/cart/12345' },
+    { cat:'neckpieces', name:'Mermen in Love Pendant', price:'₹2,899', quote:'Eternal devotion beneath the waves.', img:'mermen-in-love.png', checkout:'https://your-shopify-store.myshopify.com/cart/12345' },
+    { cat:'earrings', name:'Medusa Brass Earrings', price:'₹4,499', quote:'A gaze that stops time.', img:'medusa-earrings.jpg', checkout:'https://your-shopify-store.myshopify.com/cart/12345' },
+    { cat:'earrings', name:'Mermaids in Love Earrings', price:'₹2,899', quote:'A subtle nod to infinite romance.', checkout:'https://your-shopify-store.myshopify.com/cart/12345' },
+    { cat:'earrings', name:'Tree of Life Drop Earrings', price:'₹2,899', quote:'Carry the whole tree with you.', checkout:'https://your-shopify-store.myshopify.com/cart/12345' },
+    { cat:'rings', name:'Ouroboros Band Ring', price:'₹2,899', quote:'A cycle you wear, not just believe in.', checkout:'https://your-shopify-store.myshopify.com/cart/12345' },
+    { cat:'rings', name:'Medusa Signet Ring', price:'₹2,899', quote:'Small enough for daily wear, sharp enough to notice.', checkout:'https://your-shopify-store.myshopify.com/cart/12345' }
   ];
 
   const catLabel = { neckpieces:'Neckpiece', earrings:'Earring', rings:'Finger Ring' };
@@ -505,14 +505,14 @@
               <div class="cat">${catLabel[p.cat]}</div>
               <h4>${p.name}</h4>
               <div class="price">${p.price}</div>
+              ${p.checkout 
+                ? `<a href="${p.checkout}" target="_blank" class="cta" style="display:inline-block; border:1px solid var(--brass-light); padding:8px 16px; margin-top:12px; border-radius:2px;">Buy Now →</a>` 
+                : ``
+              }
             </div>
           </div>
           <div class="product-face product-back">
             <div class="quote">"${p.quote}"</div>
-            ${p.checkout 
-              ? `<a href="${p.checkout}" target="_blank" class="cta" style="display:inline-block; border:1px solid var(--brass-light); padding:8px 16px; margin-top:12px; border-radius:2px;">Buy Now →</a>` 
-              : `<div class="cta">Shop this piece</div>`
-            }
           </div>
         </div>
       </div>`;
