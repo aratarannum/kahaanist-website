@@ -742,14 +742,10 @@
       const slug = hash.replace('/product/', '');
       renderProductPage(slug);
     } else if(hash.startsWith('/shop')){
-
-    let hash = location.hash.replace('#','') || '/';
-    document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
-    document.querySelectorAll('.navlinks a').forEach(a=>a.classList.remove('active'));
-
-    if(hash.startsWith('/shop')){
       document.getElementById('page-shop').classList.add('active');
-      document.querySelector('[data-route="/shop"]').classList.add('active');
+      if(document.querySelector('[data-route="/shop"]')){
+        document.querySelector('[data-route="/shop"]').classList.add('active');
+      }
       const parts = hash.split('/').filter(Boolean); // ['shop','neckpieces'?]
       const filter = parts[1] || 'all';
       const meta = shopMeta[filter] || shopMeta.all;
@@ -759,10 +755,14 @@
       renderShop(filter);
     } else if(hash.startsWith('/contact')){
       document.getElementById('page-contact').classList.add('active');
-      document.querySelector('[data-route="/contact"]').classList.add('active');
+      if(document.querySelector('[data-route="/contact"]')){
+        document.querySelector('[data-route="/contact"]').classList.add('active');
+      }
     } else {
       document.getElementById('page-home').classList.add('active');
-      document.querySelector('[data-route="/"]').classList.add('active');
+      if(document.querySelector('[data-route="/"]')){
+        document.querySelector('[data-route="/"]').classList.add('active');
+      }
     }
 
     document.title = pageTitles[hash] || pageTitles[Object.keys(pageTitles).find(k => hash.startsWith(k)) ] || pageTitles['/'];
