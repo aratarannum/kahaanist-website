@@ -25,6 +25,9 @@ if (!scriptMatch) {
   const mockEnv = `
     let extractedProducts = [];
     const document = {
+      createElement: () => ({ async: false, src: '', onload: null }),
+      head: { appendChild: ()=>{} },
+      getElementsByTagName: () => [{ appendChild: ()=>{} }],
       getElementById: (id) => ({ classList: { add: ()=>{}, remove: ()=>{} }, innerHTML: '', textContent: '' }),
       querySelectorAll: (sel) => [],
       querySelector: (sel) => ({ classList: { add: ()=>{}, remove: ()=>{} } }),
