@@ -646,22 +646,95 @@
   const catLabel = { neckpieces:'Neckpiece', earrings:'Earring', rings:'Finger Ring' };
 
   function productCardHTML(p){
-          let galleryHTML = p.img ? `<img src="${p.img}" class="main-image">` : '';
-      if(p.gallery && p.gallery.length > 0){
-          p.gallery.forEach(asset => {
-              if(asset.endsWith('.mp4') || asset.endsWith('.webm')){
-                  galleryHTML += `<video src="${asset}" autoplay loop muted playsinline class="main-image" style="margin-top:20px;"></video>`;
-              } else {
-                  galleryHTML += `<img src="${asset}" class="main-image" style="margin-top:20px;" loading="lazy">`;
+    const imageContent = p.img
+      ? `<img src="${p.img}" alt="${p.name} — brass ${catLabel[p.cat].toLowerCase()} inspired by mythology" loading="lazy">`
+      : `<svg viewBox="0 0 100 100" fill="none"><circle cx="50" cy="50" r="34" stroke="#d9ab5f" stroke-width="1.2"/><circle cx="50" cy="50" r="20" stroke="#efe6d3" stroke-opacity="0.5" stroke-width="1"/><path d="M50 16 L50 84 M16 50 L84 50" stroke="#2f4a3e" stroke-width="1"/></svg>`;
+    
+    return `
+      <div class="product-card">
+        <div class="product-flip">
+          <div class="product-face product-front">
+            <a href="#/product/${p.slug}" class="product-image" style="display:block; text-decoration:none;">
+              ${imageContent}
+            </a>
+            <div class="product-info">
+              <div class="cat">${catLabel[p.cat]}</div>
+              <a href="#/product/${p.slug}" style="text-decoration:none; color:inherit;"><h4>${p.name}</h4></a>
+              <div class="price">${p.price}</div>
+              ${p.shopifyId 
+                ? `<div class="shopify-buy-container" data-shopify-id="${p.shopifyId}" style="margin-top:12px;"></div>` 
+                : `<div class="cta" style="margin-top:12px; color:var(--parchment-dim);">Coming Soon</div>`
               }
-          });
-      }
-      
-      container.innerHTML = `
-        <div class="product-page-layout">
-          <div class="product-page-gallery" style="display:flex; flex-direction:column;">
-            ${galleryHTML}
+            </div>
           </div>
+          <div class="product-face product-back">
+            <div class="quote">"${p.quote}"</div>
+          </div>
+        </div>
+      </div>`;
+  }
+
+  document.getElementById('home-featured').innerHTML =
+    products.slice(0, 6).map(productCardHTML).join('');
+
+  function renderShop(filter){
+    const grid = document.getElementById('shop-grid');
+    const list = filter === 'all' ? products : products.filter(p => p.cat === filter);
+    grid.innerHTML = list.map(productCardHTML).join('');
+    document.querySelectorAll('.filter-btn').forEach(b=>{
+      b.classList.toggle('active', b.dataset.filter === filter);
+    });
+  }
+
+  document.querySelectorAll('.filter-btn').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      location.hash = btn.dataset.filter === 'all' ? '#/shop' : '#/shop/' + btn.dataset.filter;
+    });
+  });
+
+  // ---------- Simple router ----------
+  const shopMeta = {
+    all: { eyebrow:'SHOP ALL', title:'All Kahaanist jewelry.', desc:'Neckpieces, earrings and rings, inspired by mythology and mysticism from around the world.' },
+    neckpieces: { eyebrow:'NECKPIECES', title:'Shop Neckpieces', desc:'Chokers and pendants featuring the Tree of Life, Medusa, the Ouroboros and other symbols of protection and growth.' },
+    earrings: { eyebrow:'EARRINGS', title:'Shop Earrings', desc:'Hoops and drops shaped around Medusa, the Ouroboros and other mythological icons.' },
+    rings: { eyebrow:'FINGER RINGS', title:'Shop Finger Rings', desc:'Signets and bands carrying small, everyday symbols of strength, protection and eternity.' },
+  };
+
+  const pageTitles = {
+    '/': "Kahaanist — Mythology & Mysticism Inspired Brass Jewelry",
+    '/shop': "Shop All — Kahaanist Brass Jewelry",
+    '/shop/neckpieces': "Neckpieces — Mythology-Inspired Brass Necklaces | Kahaanist",
+    '/shop/earrings': "Earrings — Mythology-Inspired Brass Earrings | Kahaanist",
+    '/shop/rings': "Finger Rings — Mythology-Inspired Brass Rings | Kahaanist",
+    '/contact': "Contact Kahaanist — Brass Jewelry, Shipping Across India",
+  };
+
+  
+  function toggleSpec(el){
+    el.classList.toggle('active');
+  }
+
+  function renderProductPage(slug){
+    const p = products.find(x => x.slug === slug);
+    if(!p) {
+        location.hash = '/shop';
+        return;
+    }
+    const container = document.getElementById('product-container');
+    const imageContent = p.img
+      ? `<img src="${p.img}" alt="${p.name}" class="main-image">`
+      : `<div class="main-image" style="display:flex; align-items:center; justify-content:center; border:1px solid var(--ink-soft);"><svg viewBox="0 0 100 100" fill="none" width="100" height="100"><circle cx="50" cy="50" r="34" stroke="#d9ab5f" stroke-width="1.2"/></svg></div>`;
+    
+    container.innerHTML = `
+      <div class="product-page-layout">
+        <div class="product-page-gallery">
+          ${imageContent}
+          <div class="thumbnails">
+            ${p.img ? `<img src="${p.img}" class="thumb">` : `<div class="thumb"></div>`}
+            <div class="thumb" style="display:flex; align-items:center; justify-content:center; font-size:12px; color:var(--parchment-dim);">+ Video</div>
+            <div class="thumb" style="display:flex; align-items:center; justify-content:center; font-size:12px; color:var(--parchment-dim);">+ Angle</div>
+          </div>
+        </div>
         <div class="product-page-info">
           <div class="cat" style="margin-bottom:8px;">${catLabel[p.cat]}</div>
           <h1>${p.name}</h1>
