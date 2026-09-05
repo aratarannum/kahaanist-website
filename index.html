@@ -906,6 +906,9 @@
   window.addEventListener('hashchange', route);
   route();
 
+  // Now that products[] and route() exist, init Two-Brain
+  initShopify();
+
   // ---------- Reveal on scroll ----------
   function revealOnScroll(){
     const els = document.querySelectorAll('.reveal:not(.in)');
