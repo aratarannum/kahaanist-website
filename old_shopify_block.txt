@@ -1,0 +1,20 @@
+// ---------- Shopify Integration ----------
+  let shopifyUI;
+  const scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+  const script = document.createElement('script');
+  script.async = true;
+  script.src = scriptURL;
+  document.head.appendChild(script);
+  script.onload = () => {
+    const client = ShopifyBuy.buildClient({
+      domain: 'kahaanist.myshopify.com',
+      storefrontAccessToken: 'a644d9e6d80b87611a5f4c9cf0199a5d',
+    });
+    ShopifyBuy.UI.onReady(client).then((ui) => {
+      shopifyUI = ui;
+      renderShopifyButtons();
+    });
+  };
+
+  const shopifyOptions = {
+    moneyFormat: 'Rs.%20%7B%7Bamount%7D%7D',
