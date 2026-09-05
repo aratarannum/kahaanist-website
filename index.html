@@ -608,6 +608,7 @@
         if (p.shopifyIdGlobal) p.shopifyId = p.shopifyIdGlobal;
       });
       // Re-render current page with USD prices
+      if(typeof renderHome === 'function') renderHome();
       route();
     }
 
@@ -707,8 +708,11 @@
       </div>`;
   }
 
-  document.getElementById('home-featured').innerHTML =
-    products.slice(0, 6).map(productCardHTML).join('');
+  function renderHome() {
+    const container = document.getElementById('home-featured');
+    if (container) container.innerHTML = products.slice(0, 6).map(productCardHTML).join('');
+  }
+  renderHome();
 
   function renderShop(filter){
     const grid = document.getElementById('shop-grid');
