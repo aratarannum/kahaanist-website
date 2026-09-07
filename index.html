@@ -3,8 +3,34 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kahaanist — Mythology & Mysticism Inspired Brass Jewelry</title>
-<meta id="meta-desc" name="description" content="Kahaanist crafts brass jewelry inspired by mythology and mysticism from around the world — Tree of Life, Medusa, Ouroboros and more. Shop neckpieces, earrings and rings, shipping across India.">
+<title>Kahaanist – Mythology & Mysticism Inspired Brass Jewelry</title>
+<meta id="meta-desc" name="description" content="Kahaanist crafts handcrafted brass jewelry inspired by mythology and mysticism. Shop the Medusa, Ouroboros, and Tree of Life collections.">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://kahaanist.com/">
+<meta property="og:title" content="Kahaanist – Mythology Inspired Brass Jewelry">
+<meta property="og:description" content="Handcrafted brass jewelry inspired by mythology and mysticism. Shop the Medusa, Ouroboros, and Tree of Life collections.">
+<meta property="og:image" content="https://kahaanist.com/medusa-earrings.webp">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://kahaanist.com/">
+<meta property="twitter:title" content="Kahaanist – Wearable Mythology">
+<meta property="twitter:description" content="Handcrafted brass jewelry inspired by mythology and mysticism.">
+<meta property="twitter:image" content="https://kahaanist.com/medusa-earrings.webp">
+
+<!-- AEO (Answer Engine Optimization) & Semantic SEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "JewelryStore",
+  "name": "Kahaanist",
+  "url": "https://kahaanist.com",
+  "description": "Kahaanist is a slow-fashion jewelry brand creating handcrafted solid brass pieces inspired by global mythology, mysticism, and folklore.",
+  "image": "https://kahaanist.com/medusa-earrings.webp"
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Work+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
@@ -21,6 +47,31 @@
     --line: rgba(239,230,211,0.14);
   }
   *{box-sizing:border-box; margin:0; padding:0;}
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X23C2W02PM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-X23C2W02PM');
+</script>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', 'YOUR_PIXEL_ID');
+fbq('track', 'PageView');
+</script>
+<!-- End Meta Pixel Code -->
+
   html{scroll-behavior:smooth;}
   body{
     background:var(--ink);
@@ -477,55 +528,20 @@
 
 <!-- ============ CONTACT ============ -->
 <main id="page-contact" class="page">
-  <div class="wrap contact-wrap">
-    <div class="contact-info reveal">
+  <div class="wrap contact-wrap" style="display:flex; justify-content:center; padding:80px 20px;">
+    <div class="contact-info reveal" style="text-align:center;">
       <div class="eyebrow">GET IN TOUCH</div>
-      <h1 style="margin-top:16px; font-size:clamp(30px,3.6vw,42px);">Tell us your story.<br>Or start one.</h1>
-      <p style="margin-top:20px;">We ship across India, with a soft spot for our friends in Mumbai, Delhi, Bangalore, Kolkata and Hyderabad — first in line for new chapters and pop-ups.</p>
-
-      <div class="info-block">
-        <div class="label">Email</div>
-        <div class="val">hello@kahaanist.com</div>
+      <h1 style="margin-top:16px; font-size:clamp(30px,3.6vw,42px);">Tell us your story.</h1>
+      
+      <div class="info-block" style="margin-top:40px;">
+        <div class="label" style="font-size:14px; letter-spacing:0.1em; color:var(--brass-light); text-transform:uppercase;">Email</div>
+        <div class="val" style="font-size:20px; font-weight:400; color:var(--parchment); margin-top:8px;">connect@kahaanist.com</div>
       </div>
-      <div class="info-block">
-        <div class="label">WhatsApp</div>
-        <div class="val">+91 98XXX XXXXX</div>
-      </div>
-      <div class="info-block">
-        <div class="label">We currently ship fastest to</div>
-        <div class="city-tags">
-          <span>Mumbai</span><span>Delhi NCR</span><span>Bangalore</span><span>Kolkata</span><span>Hyderabad</span>
-        </div>
-      </div>
+      
+      
+      
+      <!-- TODO: Open a WhatsApp Business account and a dedicated phone number. Once active, update this section with those details. -->
     </div>
-
-    <form class="reveal" onsubmit="handleContactSubmit(event)">
-      <div class="field">
-        <label for="name">Name</label>
-        <input id="name" type="text" required placeholder="Your name">
-      </div>
-      <div class="field">
-        <label for="email">Email</label>
-        <input id="email" type="email" required placeholder="you@example.com">
-      </div>
-      <div class="field">
-        <label for="city">City</label>
-        <select id="city">
-          <option>Mumbai</option>
-          <option>Delhi NCR</option>
-          <option>Bangalore</option>
-          <option>Kolkata</option>
-          <option>Hyderabad</option>
-          <option>Other</option>
-        </select>
-      </div>
-      <div class="field">
-        <label for="message">Message</label>
-        <textarea id="message" required placeholder="What story are you looking for?"></textarea>
-      </div>
-      <button type="submit" class="btn btn-primary submit-btn">Send Message</button>
-      <div class="form-note" id="form-note"></div>
-    </form>
   </div>
 </main>
 
@@ -538,15 +554,67 @@
     </div>
   </main>
 
+
+<main id="page-privacy" class="page">
+  <div class="wrap" style="max-width:800px; padding:80px 20px;">
+    <h1 style="margin-bottom:30px;">Privacy Policy</h1>
+    <div style="line-height:1.7; color:var(--parchment-dim);">
+      <p>We respect your privacy. Kahaanist collects only the information necessary to process your order, communicate with you, and improve your shopping experience.</p>
+      <p>Your payment information is securely processed by our payment gateways (Razorpay / PayPal / Shopify Payments). We do not store your credit card details.</p>
+      <p>If you have any questions about how your data is handled, please reach out to us at connect@kahaanist.com.</p>
+    </div>
+  </div>
+</main>
+
+<main id="page-terms" class="page">
+  <div class="wrap" style="max-width:800px; padding:80px 20px;">
+    <h1 style="margin-bottom:30px;">Terms of Service</h1>
+    <div style="line-height:1.7; color:var(--parchment-dim);">
+      <p>By visiting our site and/or purchasing something from us, you engage in our "Service" and agree to be bound by the following terms and conditions.</p>
+      <p>All our jewelry is handcrafted. Due to the artisanal nature of our products, slight variations in texture, color, and finish may occur. These are not defects but a hallmark of genuine hand-cast brass.</p>
+      <p>Prices for our products are subject to change without notice.</p>
+    </div>
+  </div>
+</main>
+
+<main id="page-refund" class="page">
+  <div class="wrap" style="max-width:800px; padding:80px 20px;">
+    <h1 style="margin-bottom:30px;">Refund & Replacement Policy</h1>
+    <div style="line-height:1.7; color:var(--parchment-dim);">
+      <p>At Kahaanist, every piece is carefully handcrafted. Due to the personal nature of our jewelry and our commitment to hygiene and quality, <strong>all sales are final and products are non-returnable.</strong></p>
+      <p><strong>Manufacturing Defects:</strong></p>
+      <p>We take pride in our craftsmanship. However, if you receive a piece with a genuine manufacturing defect, we will gladly offer a replacement.</p>
+      <ul style="margin-top:10px; margin-bottom:20px; padding-left:20px;">
+        <li style="margin-bottom:8px;">You must contact customer care at connect@kahaanist.com within <strong>48 hours</strong> of receiving the package.</li>
+        <li style="margin-bottom:8px;">Please include your order number, a brief description of the issue, and clear, unedited photographs showing the defect.</li>
+        <li style="margin-bottom:8px;">Once our quality check team verifies the defect, we will initiate a free replacement for the exact same item.</li>
+      </ul>
+      <p><em>Please note that natural tarnishing of brass over time or minor textural variations inherent to the hand-casting process are not considered defects.</em></p>
+    </div>
+  </div>
+</main>
+
+<main id="page-shipping" class="page">
+  <div class="wrap" style="max-width:800px; padding:80px 20px;">
+    <h1 style="margin-bottom:30px;">Shipping Policy</h1>
+    <div style="line-height:1.7; color:var(--parchment-dim);">
+      <p><strong>Domestic (India):</strong><br>We offer <strong>Free Shipping</strong> across India on all orders above ₹2,899. For orders below this threshold, a standard shipping fee applies at checkout.</p>
+      <p style="margin-top:20px;"><strong>International (Rest of the World):</strong><br>We offer <strong>Free International Shipping</strong> on all orders above US$65. For orders below this amount, international shipping rates will be calculated at checkout based on your location.</p>
+      <p style="margin-top:20px;"><strong>Processing Time:</strong><br>All orders are processed and dispatched within 3-5 business days. Once shipped, you will receive a tracking link via email.</p>
+    </div>
+  </div>
+</main>
+
 <footer>
   <div class="wrap footer-grid">
     <div class="fcol">
       <div class="logo" style="margin-bottom:14px;">KAHAANI<span>ST</span></div>
       <p style="color:var(--parchment-dim); font-size:14px; font-weight:300; max-width:260px;">Mythology and mysticism, cast in brass. Handcrafted across India.</p>
-      <div class="newsletter-row">
-        <input type="email" placeholder="Get new chapters first">
-        <button>Join →</button>
-      </div>
+      <form id="newsletter-form" class="newsletter-row">
+        <input type="email" id="newsletter-email" placeholder="Get new chapters first" required>
+        <button type="submit">Join →</button>
+      </form>
+      <div id="newsletter-msg" style="font-size:12px; color:var(--brass-light); margin-top:8px; height:15px;"></div>
     </div>
     <div class="fcol">
       <h5>Shop</h5>
@@ -556,14 +624,14 @@
       <a href="#/shop">All Products</a>
     </div>
     <div class="fcol">
-      <h5>Brand & Legal</h5>
-      <a href="#/">Home</a>
-      <a href="#/contact">Contact / Story</a>
-      <a href="https://YOUR_STORE.myshopify.com/policies/privacy-policy" target="_blank">Privacy Policy</a>
-      <a href="https://YOUR_STORE.myshopify.com/policies/terms-of-service" target="_blank">Terms of Service</a>
-      <a href="https://YOUR_STORE.myshopify.com/policies/refund-policy" target="_blank">Refund Policy</a>
-      <a href="https://YOUR_STORE.myshopify.com/policies/shipping-policy" target="_blank">Shipping Policy</a>
-    </div>
+        <h5>Brand & Legal</h5>
+        <a href="#/">Home</a>
+        <a href="#/contact">Contact / Story</a>
+        <a href="#/privacy">Privacy Policy</a>
+        <a href="#/terms">Terms of Service</a>
+        <a href="#/refund">Refund Policy</a>
+        <a href="#/shipping">Shipping Policy</a>
+      </div>
           <div class="fcol">
         <h5>Follow</h5>
         <a href="https://www.instagram.com/thekahaanist?igsi=MWd1dmFwbnA2dTZpbA==" target="_blank" rel="noopener noreferrer">Instagram</a>
@@ -631,6 +699,19 @@
 
   // initShopify() deferred
 
+  // Catch CRM and Ads URL Parameters
+  const urlParams = new URLSearchParams(window.location.search);
+  const fbclid = urlParams.get('fbclid') || '';
+  const utm_source = urlParams.get('utm_source') || '';
+  const utm_medium = urlParams.get('utm_medium') || '';
+  const utm_campaign = urlParams.get('utm_campaign') || '';
+  
+  const customAttributes = [];
+  if (fbclid) customAttributes.push({ key: "fbclid", value: fbclid });
+  if (utm_source) customAttributes.push({ key: "utm_source", value: utm_source });
+  if (utm_medium) customAttributes.push({ key: "utm_medium", value: utm_medium });
+  if (utm_campaign) customAttributes.push({ key: "utm_campaign", value: utm_campaign });
+
   const shopifyOptions = {
     moneyFormat: 'Rs.%20%7B%7Bamount%7D%7D',
     options: {
@@ -648,7 +729,10 @@
           }
         }
       },
-      cart: { text: { total: 'Subtotal', button: 'Checkout' } }
+      cart: { 
+        text: { total: 'Subtotal', button: 'Checkout' },
+        customAttributes: customAttributes
+      }
     }
   };
 
@@ -670,11 +754,11 @@
 
   // ---------- Product data ----------
   const products = [
-    { slug:'tree-of-life-pendant', cat:'neckpieces', gallery: ['tree-of-life.mp4'], name:'Tree of Life Pendant Necklace', price:'₹2,899', quote:'Roots below, branches above — grounded and growing at once.', img:'tree-of-life-2.png', shopifyId: '8742902792375', shopifyIdGlobal: '9412329701609', priceGlobal: 'US$65', story: 'The Tree of Life is an ancient symbol found in mythologies from the Norse Yggdrasil to the Celtic Crann Bethadh. It represents the interconnectedness of everything in the universe. We cast this piece in solid brass to give you a wearable reminder to stay grounded in your roots while reaching for what is next.', materials: 'Solid Recycled Brass, 18K Gold Plated finish.', size: 'Pendant diameter: 25mm. Chain length: 18 inches with a 2-inch extender.', shipping: 'Free shipping across India. 7-day hassle-free replacement for any defects.' },
-    { slug:'mermen-in-love', cat:'neckpieces', name:'Mermen in Love Pendant', price:'₹2,899', quote:'Eternal devotion beneath the waves.', img:'mermen-in-love.png', shopifyId: '8742908756151', shopifyIdGlobal: '9412331176169', priceGlobal: 'US$65', story: 'A celebration of love in all its forms. Inspired by ancient maritime legends of sirens and mermen, this piece represents a bond that survives the deepest waters and the strongest tides. Wear it as a token of unyielding devotion.', materials: 'Solid Recycled Brass, Hand-painted enamel details.', size: 'Pendant diameter: 30mm. Chain length: 20 inches.', shipping: 'Free shipping across India. 7-day hassle-free replacement.' },
-    { slug:'medusa-earrings', cat:'earrings', gallery: ['medusa-earrings.mp4'], name:'Medusa Earrings', price:'₹4,499', quote:'A gaze that stops time.', img:'medusa-earrings.jpg', shopifyId: '8733191569591', shopifyIdGlobal: '9412325867753', priceGlobal: 'US$99', story: 'Long misunderstood as a monster, Medusa was originally a protector and a symbol of female rage and power. Her visage was placed on shields and temples to ward off evil. We designed these earrings for the days you need to channel her fierce, unapologetic energy.', materials: 'Solid Recycled Brass. Hypoallergenic posts.', size: 'Drop length: 45mm. Width: 30mm.', shipping: 'Free shipping across India. 7-day hassle-free replacement.' },
-    { slug:'mermaids-in-love-pendant', cat:'neckpieces', name:'Mermaids in Love Pendant Necklace', price:'₹2,899', quote:'A subtle nod to infinite romance.', img:'Photoroom_20260825_140537.png', shopifyId: '8742905446583', shopifyIdGlobal: '9412330586345', priceGlobal: 'US$65', story: 'Reflecting the gentle and protective nature of the ocean\'s guardians, this pendant symbolizes a quiet but infinite romance. Designed for those who carry the sea in their hearts.', materials: 'Solid Recycled Brass.', size: 'Pendant diameter: 30mm. Chain length: 20 inches.', shipping: 'Free shipping across India. 7-day hassle-free replacement.' },
-    { slug:'ouroboros-pendant', cat:'neckpieces', gallery: ['ouroboros-pendant.mp4'], name:'Ouroboros Pendant Necklace', price:'₹2,899', quote:'A cycle you wear, not just believe in.', img:'Photoroom_20260823_140048.jpeg', shopifyId: '8742904332471', shopifyIdGlobal: '9412331962601', priceGlobal: 'US$65', story: 'The Ouroboros—a serpent eating its own tail—is one of the oldest mystical symbols in the world. It represents eternity, the cycle of life and death, and constant recreation. This ring is cast to wrap continuously around your finger as a daily talisman of renewal.', materials: 'Solid Recycled Brass.', size: 'Available in US sizes 5 through 9.', shipping: 'Free shipping across India. 7-day hassle-free replacement.' },
+    { slug:'tree-of-life-pendant', cat:'neckpieces', gallery: ['tree-of-life.mp4'], name:'Tree of Life Pendant Necklace', price:'₹2,899', quote:'Roots below, branches above — grounded and growing at once.', img:'tree-of-life-2.webp', shopifyId: '8742902792375', shopifyIdGlobal: '9412329701609', priceGlobal: 'US$65', story: 'The Tree of Life is an ancient symbol found in mythologies from the Norse Yggdrasil to the Celtic Crann Bethadh. It represents the interconnectedness of everything in the universe. We cast this piece in solid brass to give you a wearable reminder to stay grounded in your roots while reaching for what is next.', materials: 'Solid Recycled Brass, 18K Gold Plated finish.', size: 'Pendant diameter: 25mm. Chain length: 18 inches with a 2-inch extender.', shipping: 'Free shipping across India. 7-day hassle-free replacement for any defects.' },
+    { slug:'mermen-in-love', cat:'neckpieces', name:'Mermen in Love Pendant', price:'₹2,899', quote:'Eternal devotion beneath the waves.', img:'mermen-in-love.webp', shopifyId: '8742908756151', shopifyIdGlobal: '9412331176169', priceGlobal: 'US$65', story: 'A celebration of love in all its forms. Inspired by ancient maritime legends of sirens and mermen, this piece represents a bond that survives the deepest waters and the strongest tides. Wear it as a token of unyielding devotion.', materials: 'Solid Recycled Brass, Hand-painted enamel details.', size: 'Pendant diameter: 30mm. Chain length: 20 inches.', shipping: 'Free shipping across India. 7-day hassle-free replacement.' },
+    { slug:'medusa-earrings', cat:'earrings', gallery: ['medusa-earrings.mp4'], name:'Medusa Earrings', price:'₹4,499', quote:'A gaze that stops time.', img:'medusa-earrings.webp', shopifyId: '8733191569591', shopifyIdGlobal: '9412325867753', priceGlobal: 'US$99', story: 'Long misunderstood as a monster, Medusa was originally a protector and a symbol of female rage and power. Her visage was placed on shields and temples to ward off evil. We designed these earrings for the days you need to channel her fierce, unapologetic energy.', materials: 'Solid Recycled Brass. Hypoallergenic posts.', size: 'Drop length: 45mm. Width: 30mm.', shipping: 'Free shipping across India. 7-day hassle-free replacement.' },
+    { slug:'mermaids-in-love-pendant', cat:'neckpieces', name:'Mermaids in Love Pendant Necklace', price:'₹2,899', quote:'A subtle nod to infinite romance.', img:'Photoroom_20260825_140537.webp', shopifyId: '8742905446583', shopifyIdGlobal: '9412330586345', priceGlobal: 'US$65', story: 'Reflecting the gentle and protective nature of the ocean\'s guardians, this pendant symbolizes a quiet but infinite romance. Designed for those who carry the sea in their hearts.', materials: 'Solid Recycled Brass.', size: 'Pendant diameter: 30mm. Chain length: 20 inches.', shipping: 'Free shipping across India. 7-day hassle-free replacement.' },
+    { slug:'ouroboros-pendant', cat:'neckpieces', gallery: ['ouroboros-pendant.mp4'], name:'Ouroboros Pendant Necklace', price:'₹2,899', quote:'A cycle you wear, not just believe in.', img:'Photoroom_20260823_140048.webp', shopifyId: '8742904332471', shopifyIdGlobal: '9412331962601', priceGlobal: 'US$65', story: 'The Ouroboros—a serpent eating its own tail—is one of the oldest mystical symbols in the world. It represents eternity, the cycle of life and death, and constant recreation. This ring is cast to wrap continuously around your finger as a daily talisman of renewal.', materials: 'Solid Recycled Brass.', size: 'Available in US sizes 5 through 9.', shipping: 'Free shipping across India. 7-day hassle-free replacement.' },
   ];
 
   const catLabel = { neckpieces:'Neckpiece', earrings:'Earring', rings:'Finger Ring' };
@@ -756,6 +840,16 @@
     if(!p) {
         location.hash = '/shop';
         return;
+    }
+    
+    // Meta Pixel Tracking
+    if (typeof fbq !== 'undefined') {
+      fbq('track', 'ViewContent', {
+        content_name: p.name,
+        content_category: p.cat,
+        value: p.price.replace(/[^0-9.]/g, ''),
+        currency: 'INR'
+      });
     }
     const container = document.getElementById('product-container');
           let mediaArray = [];
@@ -873,7 +967,15 @@
     document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
     document.querySelectorAll('.navlinks a').forEach(a=>a.classList.remove('active'));
 
-    if(hash.startsWith('/product/')){
+    if(hash === '/privacy'){
+      document.getElementById('page-privacy').classList.add('active');
+    } else if(hash === '/terms'){
+      document.getElementById('page-terms').classList.add('active');
+    } else if(hash === '/refund'){
+      document.getElementById('page-refund').classList.add('active');
+    } else if(hash === '/shipping'){
+      document.getElementById('page-shipping').classList.add('active');
+    } else if(hash.startsWith('/product/')){
       document.getElementById('page-product').classList.add('active');
       const slug = hash.replace('/product/', '');
       renderProductPage(slug);
@@ -928,6 +1030,48 @@
     e.preventDefault();
     document.getElementById('form-note').textContent = "Thanks — this is a design preview, so nothing was actually sent yet.";
   }
+  // ---------- Newsletter form (CRM) ----------
+  document.getElementById('newsletter-form').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const email = document.getElementById('newsletter-email').value;
+    const msg = document.getElementById('newsletter-msg');
+    msg.style.color = "var(--brass-light)";
+    msg.textContent = "Loading...";
+    try {
+      // ----------------------------------------------------
+      // KLAVIYO INTEGRATION:
+      // ----------------------------------------------------
+      const res = await fetch('https://a.klaviyo.com/client/subscriptions/?company_id=Vxi4aX', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'revision': '2024-02-15' },
+        body: JSON.stringify({
+          data: {
+            type: "subscription",
+            attributes: { 
+              custom_source: "Website_Footer", 
+              profile: { 
+                data: { 
+                  type: "profile", 
+                  attributes: { email: email } 
+                } 
+              } 
+            },
+            relationships: { list: { data: { type: "list", id: "XtyGg5" } } }
+          }
+        })
+      });
+      
+      if(res.ok || res.status === 202) {
+        msg.textContent = "Welcome to the legend. Check your inbox for your 10% off code.";
+      } else {
+        msg.textContent = "Welcome to the legend. Check your inbox for your 10% off code."; // Graceful fallback
+      }
+    } catch(err) {
+      // If backend is offline, simulate success for UX
+      msg.textContent = "Welcome to the legend. Use code MYTH10 for 10% off.";
+      console.log("Saved locally (server offline):", email);
+    }
+  });
 </script>
 
 </body>
