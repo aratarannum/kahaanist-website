@@ -13,17 +13,9 @@ const html = fs.readFileSync(htmlPath, 'utf-8');
 let errors = 0;
 
 // --- CHECK 1: JavaScript Runtime & Syntax ---
-let scriptMatch = null;
-const scriptTags = [...html.matchAll(/<script[^>]*>([\s\S]*?)<\/script>/g)];
-for (const match of scriptTags) {
-  if (match[1].includes('const products =')) {
-    scriptMatch = match;
-    break;
-  }
-}
-
+const scriptMatch = html.match(/<script>(.*?)<\/script>/s);
 if (!scriptMatch) {
-  console.error('❌ Error: Could not find main <script> block in index.html containing products array.');
+  console.error('❌ Error: Could not find main <script> block in index.html.');
   errors++;
 } else {
   let js = scriptMatch[1];
@@ -35,14 +27,14 @@ if (!scriptMatch) {
     const document = {
       createElement: () => ({ async: false, src: '', onload: null }),
       head: { appendChild: ()=>{} },
-      getElementsByTagName: () => [{ appendChild: ()=>{}, addEventListener: ()=>{} }],
-      getElementById: (id) => ({ classList: { add: ()=>{}, remove: ()=>{}, toggle: ()=>{} }, innerHTML: '', textContent: '', addEventListener: ()=>{} }),
+      getElementsByTagName: () => [{ appendChild: ()=>{} }],
+      getElementById: (id) => ({ classList: { add: ()=>{}, remove: ()=>{} }, innerHTML: '', textContent: '' }),
       querySelectorAll: (sel) => [],
-      querySelector: (sel) => ({ classList: { add: ()=>{}, remove: ()=>{} }, addEventListener: ()=>{} }),
+      querySelector: (sel) => ({ classList: { add: ()=>{}, remove: ()=>{} } }),
       title: ''
     };
-    const location = { hash: '', search: '' };
-    const window = { addEventListener: ()=>{}, scrollTo: ()=>{}, location: location };
+    const window = { addEventListener: ()=>{}, scrollTo: ()=>{} };
+    const location = { hash: '' };
     const setTimeout = ()=>{};
     const IntersectionObserver = class { observe(){} unobserve(){} };
   `;
