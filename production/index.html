@@ -509,7 +509,7 @@ fbq('track', 'PageView');
 
   .product-image svg{ width:44%; opacity:0.85; }
 
-  .product-image img{ width:100%; height:100%; object-fit:cover; display:block; }
+  .product-image img{ width:100%; height:100%; object-fit:contain; display:block; }
 
   .product-info{ padding:18px 20px; }
 
@@ -1439,7 +1439,7 @@ fbq('track', 'PageView');
 
         styles: {
 
-          product: { '@media (min-width: 601px)': { 'max-width': '100%', 'margin': '0' } },
+          product: { 'width': '100%', 'text-align': 'center', '@media (min-width: 601px)': { 'max-width': '100%', 'margin': '0 auto' } },
 
           button: {
 
@@ -1563,7 +1563,7 @@ fbq('track', 'PageView');
 
               ${p.shopifyId 
 
-                ? `<div class="shopify-buy-container" data-shopify-id="${p.shopifyId}" style="margin-top:12px;"></div>` 
+                ? `<div class="shopify-buy-container" data-shopify-id="${p.shopifyId}" style="margin-top:12px; display:flex; justify-content:center; width:100%;"></div>` 
 
                 : `<div class="cta" style="margin-top:12px; color:var(--parchment-dim);">Coming Soon</div>`
 
@@ -1769,7 +1769,7 @@ fbq('track', 'PageView');
 
                ? `<div style="position:relative; width:100%; height:100%;">
 
-                    <video src="${asset}#t=0.1" muted playsinline style="width:100%; height:100%; object-fit:cover; pointer-events:none;"></video>
+                    <video src="${asset}#t=0.1" muted playsinline style="width:100%; height:100%; object-fit:contain; pointer-events:none;"></video>
 
                     <div style="position:absolute; top:0; left:0; width:100%; height:100%; display:flex; align-items:center; justify-content:center; background:rgba(0,0,0,0.25);">
 
@@ -1779,7 +1779,7 @@ fbq('track', 'PageView');
 
                   </div>`
 
-               : `<img src="${asset}" style="width:100%; height:100%; object-fit:cover;">`;
+               : `<img src="${asset}" style="width:100%; height:100%; object-fit:contain;">`;
 
           
 
