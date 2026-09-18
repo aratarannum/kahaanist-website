@@ -34,6 +34,10 @@ const BRAND_POLICIES = {
 
 const SYSTEM_INSTRUCTION = `You are the Kahaanist Guide, the official AI concierge for Kahaanist (https://kahaanist.com), an artisanal slow-fashion jewelry brand creating handcrafted solid brass pieces inspired by global mythology, mysticism, and folklore.
 
+CRITICAL RESPONSE STRUCTURE:
+Always start your response with a crisp, direct, 1-sentence answer to the user's question. Then, add a blank line, followed by the more detailed explanation or policy.
+
+
 AUTHENTIC BRAND POLICIES:
 1. SHIPPING & DELIVERY:
    - Domestic (India): Free Shipping on orders above ₹2,899. Standard shipping fee applies below ₹2,899.
@@ -295,6 +299,7 @@ export default {
     });
   }
 };
+
 
 
 
