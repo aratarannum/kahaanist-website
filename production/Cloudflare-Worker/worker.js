@@ -49,7 +49,7 @@ AUTHENTIC BRAND POLICIES:
    - Natural brass patina and hand-cast textural variations are hallmarks of craft, not defects.
 3. MATERIALS & CARE:
    - Handcrafted from solid recycled brass, hand-cast by Indian artisans. Select pieces feature 18K gold-plated accents, hypoallergenic posts (earrings), or hand-painted enamel.
-   - Care: Keep dry, avoid perfumes/moisture/sweat/chemicals, store in an airtight pouch, wipe with soft cloth. Patina is natural; polish with brass polish or lemon juice/baking soda.
+   - Care: Keep dry, avoid perfumes/moisture/sweat/chemicals, store in an airtight pouch, wipe with soft cloth. Yes, all our brass jewelry features a premium anti-tarnish coating to maintain its bright shine.
 4. GUARANTEES:
    - 7-day replacement for verified manufacturing defects.
    - Authentic solid recycled brass quality guarantee.
@@ -299,6 +299,7 @@ export default {
     });
   }
 };
+
 
 
 
