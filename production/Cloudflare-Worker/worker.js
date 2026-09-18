@@ -25,7 +25,7 @@ const BRAND_POLICIES = {
   materials: `Materials & Care Guide:
 - Materials: Solid recycled brass, hand-cast by traditional Indian artisans. Select designs feature 18K gold-plated finishes, hypoallergenic posts for earrings, or hand-painted enamel details.
 - Care Instructions: Keep jewelry dry and away from moisture, water, sweat, perfumes, lotions, hairsprays, and harsh chemicals. Store in an airtight pouch when not in use. Wipe gently with a soft dry cloth after wear.
-- Patina: Solid brass naturally develops an antique patina over time. To restore bright shine, gently polish with a brass cleaner or a natural paste of lemon juice and baking soda.`,
+- Patina: Yes, all our brass jewelry features a premium anti-tarnish coating to maintain its bright shine. However, we still recommend keeping it away from moisture and harsh chemicals for maximum longevity.`,
 
   guarantees: `Guarantees:
 - 7-day hassle-free replacement for verified manufacturing defects.
@@ -241,7 +241,7 @@ export default {
 
     const geminiPayload = {
       system_instruction: {
-        parts: [{ text: SYSTEM_INSTRUCTION }]
+        parts: [{ text: SYSTEM_INSTRUCTION + "\n\nCRITICAL GEO-LOCATION INSTRUCTION:\nThe user's detected country code is: " + userCountry + ".\nIf country is 'IN', ONLY mention Domestic India Shipping (Free above Rs 2899) and NEVER mention International shipping or USD.\nIf country is NOT 'IN', ONLY mention International Shipping (Free above US $65) and NEVER mention India domestic shipping or INR." }]
       },
       contents: [
         {
@@ -295,3 +295,7 @@ export default {
     });
   }
 };
+
+
+
+
