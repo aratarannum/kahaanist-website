@@ -4,3 +4,7 @@ compatibility_date = "2024-09-18"
 
 # You can manage your GEMINI_API_KEY secret via:
 # npx wrangler secret put GEMINI_API_KEY
+
+[[kv_namespaces]]
+binding = "KAHAANIST_LEADS"
+id = "1f1dbf6046314a0aaeb0a4e3f88f9d91"

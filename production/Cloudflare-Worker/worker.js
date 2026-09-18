@@ -165,13 +165,44 @@ export default {
       "Content-Type": "application/json"
     };
 
-    // Handle CORS preflight
+    // Handle CORS preflight requests
     if (request.method === "OPTIONS") {
       return new Response(null, { headers: corsHeaders });
     }
 
+    const url = new URL(request.url);
+
+    // ----------------------------------------------------
+    // NEW: Newsletter / Leads Subscribe Endpoint
+    // ----------------------------------------------------
+    if (request.method === "POST" && url.pathname === "/subscribe") {
+      try {
+        const body = await request.json();
+        const email = body.email || "no-email";
+        const phone = body.phone || "no-phone";
+        
+        // Save to KV Store with timestamp
+        const timestamp = new Date().toISOString();
+        const key = `lead_${timestamp}_${email}`;
+        
+        await env.KAHAANIST_LEADS.put(key, JSON.stringify({
+          email: email,
+          phone: phone,
+          timestamp: timestamp,
+          source: "join_modal"
+        }));
+
+        console.log(`[LEAD_CAPTURE] Saved new lead to KV database: ${email} | ${phone}`);
+        return new Response(JSON.stringify({ success: true, message: "Welcome to the lore." }), { 
+          headers: { ...corsHeaders, "Content-Type": "application/json" } 
+        });
+      } catch (err) {
+        return new Response(JSON.stringify({ error: err.message }), { status: 500, headers: corsHeaders });
+      }
+    }
+
     if (request.method !== "POST") {
-      return new Response(JSON.stringify({ error: "Method not allowed" }), {
+      return new Response(JSON.stringify({ error: "Method not allowed. Use POST /chat or /subscribe" }), {
         status: 405,
         headers: corsHeaders
       });

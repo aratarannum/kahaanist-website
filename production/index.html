@@ -3079,17 +3079,35 @@ fbq('track', 'PageView');
     }
   });
 
-  document.getElementById('join-modal-form').addEventListener('submit', (e) => {
+  document.getElementById('join-modal-form').addEventListener('submit', async (e) => {
     e.preventDefault();
     const email = document.getElementById('join-email').value;
     const phone = document.getElementById('join-phone').value;
+    const msgDiv = document.getElementById('join-modal-msg');
+
     if(!email && !phone) {
-        document.getElementById('join-modal-msg').innerText = 'Please provide an email or phone.';
+        msgDiv.innerText = 'Please provide an email or phone.';
         return;
     }
-    // Simulate API call
-    document.getElementById('join-modal-msg').innerText = 'Welcome to the lore...';
-    setTimeout(() => { closeJoinModal(); }, 1500);
+    
+    msgDiv.innerText = 'Joining...';
+    
+    try {
+      const response = await fetch('https://kahaanist-chatbot.ara-tarannum.workers.dev/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: email, phone: phone })
+      });
+      
+      if (response.ok) {
+        msgDiv.innerText = 'Welcome to the lore.';
+        setTimeout(() => { closeJoinModal(); }, 1500);
+      } else {
+        msgDiv.innerText = 'Something went wrong. Try again.';
+      }
+    } catch (err) {
+      msgDiv.innerText = 'Connection error. Please try again later.';
+    }
   });
 </script>
 
