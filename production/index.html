@@ -1,1475 +1,3102 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
+
 <!-- Google tag (gtag.js) -->
+
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-X23C2W02PM"></script>
+
 <script>
+
   window.dataLayer = window.dataLayer || [];
+
   function gtag(){dataLayer.push(arguments);}
+
   gtag('js', new Date());
+
   gtag('config', 'G-X23C2W02PM');
+
 </script>
+
+
 
 <!-- Meta Pixel Code -->
+
 <script>
+
 !function(f,b,e,v,n,t,s)
+
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+
 if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+
 n.queue=[];t=b.createElement(e);t.async=!0;
+
 t.src=v;s=b.getElementsByTagName(e)[0];
+
 s.parentNode.insertBefore(t,s)}(window, document,'script',
+
 'https://connect.facebook.net/en_US/fbevents.js');
+
 fbq('init', 'YOUR_PIXEL_ID');
+
 fbq('track', 'PageView');
+
 </script>
+
 <!-- End Meta Pixel Code -->
 
+
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
 <base href="/">
+
 <title>Kahaanist - Wearable Lore</title>
+
 <meta id="meta-desc" name="description" content="Kahaanist creates wearable lore—mythology-inspired brass jewelry. Discover the Medusa, Sun, and Tree of Life collections.">
 
+
+
 <!-- Open Graph / Facebook -->
+
 <meta property="og:type" content="website">
+
 <meta property="og:url" content="https://kahaanist.com/">
+
 <meta property="og:title" content="Kahaanist – Mythology Inspired Brass Jewelry">
+
 <meta property="og:description" content="Handcrafted brass jewelry inspired by mythology and mysticism. Shop the Medusa, Ouroboros, and Tree of Life collections.">
+
   <meta property="og:image" content="https://kahaanist.com/Medusa-earrings-black.png">
 
+
+
   <!-- Twitter Meta Tags -->
+
   <meta name="twitter:card" content="summary_large_image">
+
   <meta property="twitter:domain" content="kahaanist.com">
+
   <meta property="twitter:url" content="https://kahaanist.com">
+
   <meta name="twitter:title" content="Kahaanist - Wearable Lore">
+
   <meta name="twitter:description" content="Handcrafted brass jewelry inspired by mythology and mysticism.">
+
   <meta property="twitter:image" content="https://kahaanist.com/Medusa-earrings-black.png">
 
+
+
 <!-- AEO (Answer Engine Optimization) & Semantic SEO -->
+
 <script type="application/ld+json">
+
 {
+
   "@context": "https://schema.org",
+
   "@type": "JewelryStore",
+
   "name": "Kahaanist",
+
   "url": "https://kahaanist.com",
+
   "description": "Kahaanist is a slow-fashion jewelry brand creating handcrafted solid brass pieces inspired by global mythology, mysticism, and folklore.",
+
   "image": "https://kahaanist.com/medusa-earrings.webp"
+
 }
+
 </script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
+
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Work+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
 <style>
+
   :root{
+
     --ink:#1c1712;
+
     --ink-soft:#251f18;
+
     --brass:#b8863b;
+
     --brass-light:#d9ab5f;
+
     --vermilion:#a23b2e;
+
     --parchment:#efe6d3;
+
     --parchment-dim:#ddd0af;
+
     --teal:#2f4a3e;
+
     --charcoal:#2a211b;
+
     --line: rgba(239,230,211,0.14);
+
   }
+
   *{box-sizing:border-box; margin:0; padding:0;}
 
+
+
   html{scroll-behavior:smooth;}
+
   body{
+
     background:var(--ink);
+
     color:var(--parchment);
+
     font-family:'Work Sans', sans-serif;
+
     font-weight:400;
+
     line-height:1.6;
+
     overflow-x:hidden;
+
   }
+
   h1,h2,h3,.display{
+
     font-family:'Cinzel', serif;
+
     font-weight:600;
+
     letter-spacing:0.02em;
+
     color:var(--parchment);
+
   }
+
   .mono{ font-family:'JetBrains Mono', monospace; letter-spacing:0.08em; }
+
   a{ color:inherit; text-decoration:none; }
+
   img{max-width:100%; display:block;}
+
   .wrap{ max-width:1180px; margin:0 auto; padding:0 32px; }
+
   .eyebrow{
+
     font-family:'JetBrains Mono', monospace;
+
     font-size:12px;
+
     letter-spacing:0.22em;
+
     text-transform:uppercase;
+
     color:var(--brass-light);
+
     display:flex; align-items:center; gap:12px;
+
   }
+
   .eyebrow::before{ content:''; width:24px; height:1px; background:var(--brass-light); display:inline-block; }
 
+
+
   /* ---------- NAV ---------- */
+
   header{
+
     position:fixed; top:0; left:0; right:0; z-index:100;
+
     background:rgba(28,23,18,0.92);
+
     backdrop-filter:blur(6px);
+
     border-bottom:1px solid var(--line);
+
   }
+
   nav.wrap{
+
     display:flex; align-items:center; justify-content:space-between;
+
     padding-top:18px; padding-bottom:18px;
+
   }
+
   .logo{
+
     font-family:'Cinzel', serif; font-size:22px; font-weight:700;
+
     letter-spacing:0.06em;
+
   }
+
   .logo span{ color:var(--brass-light); }
+
   .navlinks{ display:flex; align-items:center; gap:34px; font-size:14px; letter-spacing:0.03em; }
+
   .navlinks a{ position:relative; padding:4px 0; color:var(--parchment-dim); transition:color .2s; }
+
   .navlinks a:hover, .navlinks a.active{ color:var(--brass-light); }
+
   .navlinks a.active::after{
+
     content:''; position:absolute; left:0; right:0; bottom:-4px; height:1px; background:var(--brass-light);
+
   }
+
   .navlinks .dropdown{ position:relative; }
+
   .dropdown-menu{
+
     position:absolute; top:28px; left:-16px; background:var(--charcoal);
+
     border:1px solid var(--line); min-width:170px; padding:8px 0;
+
     opacity:0; visibility:hidden; transform:translateY(-6px);
+
     transition:all .18s ease;
+
   }
+
   .dropdown:hover .dropdown-menu{ opacity:1; visibility:visible; transform:translateY(0); }
+
   .dropdown-menu a{ display:block; padding:10px 18px; font-size:13px; }
+
   .dropdown-menu a:hover{ background:rgba(184,134,59,0.12); }
+
   .navcta{
+
     border:1px solid var(--brass); color:var(--brass-light);
+
     padding:9px 20px; font-size:13px; letter-spacing:0.04em; border-radius:2px;
+
     transition:all .2s;
+
   }
+
   .navcta:hover{ background:var(--brass); color:var(--ink); }
 
+
+
   /* ---------- PAGES ---------- */
+
   .page{ display:none; }
+
   .page.active{ display:block; }
 
+
+
   /* ---------- HERO ---------- */
+
   .hero{
+
     min-height:56vh; display:flex; align-items:center; position:relative;
+
     padding-top:100px;
+
     background:
+
       radial-gradient(ellipse at 75% 25%, rgba(184,134,59,0.14), transparent 55%),
+
       radial-gradient(ellipse at 15% 80%, rgba(47,74,62,0.22), transparent 50%),
+
       var(--ink);
+
     overflow:hidden;
+
   }
+
   .hero-motif{
+
     position:absolute; right:-60px; top:50%; transform:translateY(-50%);
+
     width:520px; height:520px; opacity:0.5;
+
   }
+
   .hero-inner{ position:relative; z-index:2; }
+
   .hero-inner-content{ max-width:640px; }
+
   .hero h1{
+
     font-size:clamp(38px,5vw,60px); line-height:1.12; margin:22px 0 24px;
+
   }
+
   .hero h1 em{ font-style:normal; color:var(--brass-light); }
+
   .hero p.lede{
+
     font-size:18px; color:var(--parchment-dim); max-width:480px; margin-bottom:36px; font-weight:300;
+
   }
+
   .btn-row{ display:flex; gap:18px; flex-wrap:wrap; }
+
   .btn{
+
     display:inline-block; padding:15px 30px; font-size:14px; letter-spacing:0.05em;
+
     border-radius:2px; transition:all .2s; cursor:pointer; border:1px solid transparent;
+
   }
+
   .btn-primary{ background:var(--brass); color:var(--ink); font-weight:500; }
+
   .btn-primary:hover{ background:var(--brass-light); }
+
   .btn-ghost{ border-color:var(--line); color:var(--parchment); }
+
   .btn-ghost:hover{ border-color:var(--brass-light); color:var(--brass-light); }
+
   .scroll-cue{
+
     position:absolute; bottom:38px; left:32px; font-size:12px; color:var(--parchment-dim);
+
     display:flex; align-items:center; gap:10px;
+
   }
+
   .scroll-cue::after{
+
     content:''; width:1px; height:34px; background:linear-gradient(var(--brass-light), transparent);
+
     animation:pulse 2s infinite;
+
   }
+
   @keyframes pulse{ 0%,100%{opacity:.3;} 50%{opacity:1;} }
 
+
+
   /* ---------- SECTION shared ---------- */
+
   section{ padding:110px 0; position:relative; }
+
   .section-head{ max-width:620px; margin-bottom:56px; }
+
   .section-head h2{ font-size:clamp(28px,3.4vw,40px); margin-top:16px; }
+
   .divider{
+
     width:100%; height:60px; opacity:0.55;
+
   }
+
+
 
   /* ---------- STORY ---------- */
+
   .story{ background:var(--ink-soft); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+
   .story-grid{ display:grid; grid-template-columns:1fr 1fr; gap:70px; align-items:center; }
+
   .story p{ color:var(--parchment-dim); font-weight:300; font-size:16px; margin-bottom:16px; }
+
   .story-mark{
+
     width:100%; aspect-ratio:1; border:1px solid var(--line); border-radius:50%;
+
     display:flex; align-items:center; justify-content:center; position:relative;
+
   }
+
   .story-mark::before{
+
     content:''; position:absolute; inset:26px; border:1px solid rgba(184,134,59,0.35); border-radius:50%;
+
   }
+
   .story-mark .word{
+
     font-family:'Cinzel',serif; color:var(--brass-light); font-size:15px; letter-spacing:0.3em;
+
   }
+
+
 
   /* ---------- CHAPTERS / CATEGORIES ---------- */
+
   .chapters-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:26px; }
+
   .chapter-card{
+
     border:1px solid var(--line); padding:40px 28px; position:relative; cursor:pointer;
+
     transition:all .25s; overflow:hidden;
+
   }
+
   .chapter-card:hover{ border-color:var(--brass); transform:translateY(-4px); }
+
   .chapter-num{ font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--brass-light); letter-spacing:0.15em; }
+
   .chapter-card h3{ font-size:22px; margin:18px 0 12px; }
+
   .chapter-card p{ color:var(--parchment-dim); font-size:14px; font-weight:300; margin-bottom:22px; }
+
   .chapter-link{ font-size:13px; color:var(--brass-light); letter-spacing:0.04em; }
+
   .chapter-link::after{ content:' →'; }
 
+
+
   /* ---------- SHOP ---------- */
+
   .shop-header{ padding-top:150px; padding-bottom:40px; }
+
   .filter-row{ display:flex; gap:12px; flex-wrap:wrap; margin-top:30px; }
+
   .filter-btn{
+
     padding:10px 20px; border:1px solid var(--line); font-size:13px; letter-spacing:0.03em;
+
     color:var(--parchment-dim); border-radius:20px; cursor:pointer; transition:all .2s;
+
   }
+
   .filter-btn:hover{ border-color:var(--brass-light); color:var(--brass-light); }
+
   .filter-btn.active{ background:var(--brass); border-color:var(--brass); color:var(--ink); }
 
+
+
   .product-grid{
+
     display:grid; grid-template-columns:repeat(3,1fr); gap:30px;
+
     padding-bottom:120px;
+
   }
+
   .product-card{ perspective:1200px; height:380px; }
+
   .product-flip{
+
     position:relative; width:100%; height:100%;
+
   }
+
   .product-face{
+
     position:absolute; inset:0; backface-visibility:hidden; border:1px solid var(--line);
+
     display:flex; flex-direction:column;
+
   }
+
   .product-front{ background:var(--ink-soft); }
+
   .product-image{
+
     flex:1; position:relative; overflow:hidden;
+
     background:
+
       radial-gradient(circle at 30% 30%, rgba(217,171,95,0.35), transparent 60%),
+
       linear-gradient(135deg, var(--charcoal), var(--ink));
+
     display:flex; align-items:center; justify-content:center;
+
   }
+
   .product-image svg{ width:44%; opacity:0.85; }
+
   .product-image img{ width:100%; height:100%; object-fit:cover; display:block; }
+
   .product-info{ padding:18px 20px; }
+
   .product-info .cat{ font-size:11px; letter-spacing:0.12em; color:var(--brass-light); text-transform:uppercase; }
+
   .product-info h4{ font-family:'Cinzel',serif; font-size:17px; margin:8px 0 6px; font-weight:600; }
+
   .product-info .price{ font-family:'JetBrains Mono',monospace; font-size:14px; color:var(--parchment-dim); }
+
   .product-back{
+
     display: none;
+
     background:var(--teal); transform:rotateY(180deg); padding:34px; justify-content:center;
+
     align-items:center; text-align:center;
+
   }
+
   .product-back .quote{ font-family:'Cinzel',serif; font-size:18px; line-height:1.5; color:var(--parchment); margin-bottom:18px; }
+
   .product-back .cta{ font-size:13px; color:var(--brass-light); letter-spacing:0.04em; }
+
   .product-back .cta::after{ content:' →'; }
 
+
+
   /* ---------- CONTACT ---------- */
+
   .contact-wrap{ padding-top:150px; padding-bottom:120px; display:grid; grid-template-columns:1.1fr 0.9fr; gap:70px; }
+
   .contact-info p{ color:var(--parchment-dim); font-weight:300; margin-bottom:26px; max-width:420px; }
+
   .info-block{ margin-bottom:28px; }
+
   .info-block .label{ font-size:12px; letter-spacing:0.12em; color:var(--brass-light); text-transform:uppercase; margin-bottom:6px; }
+
   .info-block .val{ font-size:15px; }
+
   .city-tags{ display:flex; gap:10px; flex-wrap:wrap; margin-top:8px; }
+
   .city-tags span{
+
     font-size:12px; padding:6px 14px; border:1px solid var(--line); border-radius:20px; color:var(--parchment-dim);
+
   }
+
   form{ display:flex; flex-direction:column; gap:20px; }
+
   .field label{ display:block; font-size:12px; letter-spacing:0.1em; color:var(--parchment-dim); margin-bottom:8px; text-transform:uppercase; }
+
   .field input, .field textarea, .field select{
+
     width:100%; background:transparent; border:none; border-bottom:1px solid var(--line);
+
     color:var(--parchment); font-family:'Work Sans',sans-serif; font-size:15px; padding:10px 2px;
+
     outline:none; transition:border-color .2s;
+
   }
+
   .field input:focus, .field textarea:focus, .field select:focus{ border-color:var(--brass-light); }
+
   .field select option{ background:var(--ink); }
+
   textarea{ resize:vertical; min-height:90px; }
+
   .submit-btn{ align-self:flex-start; margin-top:6px; }
+
   .form-note{ font-size:12px; color:var(--parchment-dim); margin-top:6px; }
 
+
+
   /* ---------- FOOTER ---------- */
+
   footer{ border-top:1px solid var(--line); padding:60px 0 34px; background:var(--ink-soft); }
+
   .footer-grid{ display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:40px; margin-bottom:50px; }
+
   footer h5{ font-size:13px; letter-spacing:0.1em; color:var(--brass-light); text-transform:uppercase; margin-bottom:18px; }
+
   footer .fcol a{ display:block; font-size:14px; color:var(--parchment-dim); margin-bottom:10px; }
+
   footer .fcol a:hover{ color:var(--brass-light); }
+
   .newsletter-row{ display:flex; align-items:center; gap:8px; margin-top:8px; border-bottom:1px solid var(--line); padding-bottom:8px; max-width:280px; }
+
   .newsletter-row input{ background:transparent; border:none; outline:none; color:var(--parchment); font-size:14px; flex:1; }
+
   .newsletter-row button{ background:none; border:none; color:var(--brass-light); font-size:13px; cursor:pointer; }
+
   .footer-bottom{
+
     display:flex; justify-content:space-between; padding-top:26px; border-top:1px solid var(--line);
+
     font-size:12px; color:var(--parchment-dim); flex-wrap:wrap; gap:10px;
+
   }
+
+
 
   /* ---------- reveal on scroll ---------- */
+
   .reveal{ opacity:0; transform:translateY(24px); transition:opacity .7s ease, transform .7s ease; }
+
   .reveal.in{ opacity:1; transform:translateY(0); }
 
+
+
   @media (prefers-reduced-motion: reduce){
+
     *{ animation:none !important; transition:none !important; }
+
   }
+
+
 
   @media (max-width:860px){
+
     .navlinks{ display:none; }
+
     .story-grid{ grid-template-columns:1fr; }
+
     .chapters-grid{ grid-template-columns:1fr; }
+
     .product-grid{ grid-template-columns:1fr 1fr; }
+
     .contact-wrap{ grid-template-columns:1fr; }
+
     .footer-grid{ grid-template-columns:1fr 1fr; }
+
   }
+
   @media (max-width:560px){
+
     .product-grid{ grid-template-columns:1fr; }
+
     .footer-grid{ grid-template-columns:1fr; }
+
   }
+
+
 
     /* Product Page CSS */
+
     .product-page-layout {
+
       display: grid;
+
       grid-template-columns: 1fr 1fr;
+
       gap: 60px;
+
       margin-top: 40px;
+
       margin-bottom: 80px;
+
     }
+
     .product-page-gallery {
+
       position: sticky;
+
       top: 100px;
+
     }
+
     .main-image {
+
       width: 100%;
+
       height: 600px;
+
       object-fit: cover;
+
       background: var(--ink-soft);
+
       border-radius: 4px;
+
       margin-bottom: 16px;
+
     }
+
     .thumbnails {
+
       display: flex;
+
       gap: 12px;
+
     }
+
     .thumb {
+
       width: 80px;
+
       height: 80px;
+
       object-fit: cover;
+
       background: var(--ink-soft);
+
       cursor: pointer;
+
       border: 1px solid transparent;
+
       border-radius: 2px;
+
       transition: 0.3s;
+
     }
+
     .thumb:hover { border-color: var(--brass-light); }
+
     .product-page-info h1 {
+
       font-size: 32px;
+
       margin-bottom: 8px;
+
     }
+
     .product-page-price {
+
       font-size: 24px;
+
       color: var(--brass-light);
+
       margin-bottom: 24px;
+
       font-weight: 500;
+
     }
+
     .product-buy-form {
+
       margin-bottom: 40px;
+
       padding-bottom: 30px;
+
       border-bottom: 1px solid var(--ink-soft);
+
     }
+
     .product-buy-form .btn {
+
       width: 100%;
+
       text-align: center;
+
       padding: 16px;
+
       font-size: 16px;
+
     }
+
     .product-story {
+
       margin-bottom: 40px;
+
       font-size: 17px;
+
       line-height: 1.6;
+
       color: var(--parchment);
+
     }
+
     .product-specs {
+
       margin-bottom: 40px;
+
     }
+
     .spec-item {
+
       padding: 16px 0;
+
       border-bottom: 1px solid var(--ink-soft);
+
       display: flex;
+
       justify-content: space-between;
+
       align-items: center;
+
       cursor: pointer;
+
     }
+
     .spec-item h4 {
+
       margin: 0;
+
       font-size: 15px;
+
       font-weight: 600;
+
       letter-spacing: 0.05em;
+
     }
+
     .spec-content {
+
       display: none;
+
       padding: 12px 0 16px 0;
+
       color: var(--parchment-dim);
+
       font-size: 15px;
+
       line-height: 1.5;
+
     }
+
     .spec-item.active + .spec-content {
+
       display: block;
+
     }
+
     @media (max-width: 900px){
+
       .product-page-layout { grid-template-columns: 1fr; gap: 40px; }
+
       .product-page-gallery { position: relative; top: 0; }
+
       .main-image { height: 400px; }
+
     }
+
+
 
 </style>
+
 </head>
+
 <body>
 
+
+
 <header>
+
 <div id="geo-banner" style="background: var(--brass-light); color: var(--ink); text-align: center; padding: 8px 16px; font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 500; letter-spacing: 0.1em; display: none; width: 100%;"></div>
+
 <script>
+
   fetch('https://ipapi.co/json/')
+
     .then(res => res.json())
+
     .then(data => {
+
       const banner = document.getElementById('geo-banner');
+
       if (data.country_code === 'IN') {
+
         banner.innerText = 'Handcrafted across India. Free Domestic Shipping.';
+
       } else {
+
         banner.innerText = 'Handcrafted in India. Express Shipping to ' + (data.country_name || 'your country') + '.';
+
       }
+
       banner.style.display = 'block';
+
     }).catch(() => {});
+
 </script>
+
   <nav class="wrap">
+
     <a href="/" class="logo">KAHAANI<span>ST</span></a>
+
     <div class="navlinks">
+
       <a href="/" data-route="/">Home</a>
+
       <div class="dropdown">
+
         <a href="/shop" data-route="/shop">Shop</a>
+
         <div class="dropdown-menu">
+
           <a href="/shop/neckpieces">Neckpieces</a>
+
           <a href="/shop/earrings">Earrings</a>
+
           <a href="/shop/rings">Finger Rings</a>
+
         </div>
+
       </div>
+
       <a href="/contact" data-route="/contact">Contact</a>
+
     </div>
-    <a href="/shop" class="navcta">Shop the Myths</a>
+
+    <button class="navcta" onclick="openJoinModal()">Join &#10022;</button>
+
   </nav>
+
 </header>
 
+
+
 <!-- ============ HOME ============ -->
+
 <main id="page-home" class="page">
 
+
+
   <section class="hero">
+
     <div class="wrap hero-inner">
+
       <div class="hero-inner-content">
+
         <div class="eyebrow">HANDCRAFTED BRASS JEWELRY</div>
+
         <h1>Wearable Lore.</h1>
-        <div class="btn-row">
-          <a href="/shop" class="btn btn-primary">Shop Now</a>
-        </div>
+
+        
+
       </div>
+
     </div>
+
     <svg class="hero-motif" viewBox="0 0 200 200" fill="none">
+
       <circle cx="100" cy="100" r="98" stroke="#b8863b" stroke-opacity="0.35"/>
+
       <path d="M100 30 C130 55 145 90 100 170 C55 90 70 55 100 30 Z" stroke="#d9ab5f" stroke-opacity="0.5"/>
+
       <path d="M100 170 C60 150 40 110 55 70 C70 90 60 130 100 170 Z" stroke="#2f4a3e" stroke-opacity="0.5"/>
+
       <path d="M100 170 C140 150 160 110 145 70 C130 90 140 130 100 170 Z" stroke="#2f4a3e" stroke-opacity="0.5"/>
+
       <circle cx="100" cy="100" r="60" stroke="#efe6d3" stroke-opacity="0.12"/>
+
     </svg>
+
   </section>
+
+
 
   <section style="padding-top:60px;">
+
     <div class="wrap">
+
       <div class="product-grid" id="home-featured"></div>
+
     </div>
+
   </section>
+
+
 
   <section style="padding-top:0; padding-bottom:100px;">
+
     <div class="wrap">
+
       <div class="chapters-grid">
+
         <div class="chapter-card reveal" onclick="navigateTo('/shop/neckpieces')" style="text-align:center; padding:34px 20px;">
+
           <div class="product-image" style="height:120px; margin-bottom:18px;">
+
             <svg viewBox="0 0 100 100" fill="none" style="width:38%;">
+
               <path d="M50 18 C64 30 72 44 68 60 C64 76 54 84 50 92 C46 84 36 76 32 60 C28 44 36 30 50 18 Z" stroke="#d9ab5f" stroke-width="1.4"/>
+
             </svg>
+
           </div>
+
           <h3 style="font-size:18px;">Neckpieces</h3>
+
         </div>
+
         <div class="chapter-card reveal" onclick="navigateTo('/shop/earrings')" style="text-align:center; padding:34px 20px;">
+
           <div class="product-image" style="height:120px; margin-bottom:18px;">
+
             <svg viewBox="0 0 100 100" fill="none" style="width:32%;">
+
               <circle cx="50" cy="42" r="20" stroke="#d9ab5f" stroke-width="1.4"/>
+
               <path d="M50 62 L50 84" stroke="#d9ab5f" stroke-width="1.4"/>
+
             </svg>
+
           </div>
+
           <h3 style="font-size:18px;">Earrings</h3>
+
         </div>
+
         <div class="chapter-card reveal" onclick="navigateTo('/shop/rings')" style="text-align:center; padding:34px 20px;">
+
           <div class="product-image" style="height:120px; margin-bottom:18px;">
+
             <svg viewBox="0 0 100 100" fill="none" style="width:30%;">
+
               <circle cx="50" cy="56" r="22" stroke="#d9ab5f" stroke-width="1.4"/>
+
               <circle cx="50" cy="30" r="7" fill="#a23b2e" fill-opacity="0.7"/>
+
             </svg>
+
           </div>
+
           <h3 style="font-size:18px;">Finger Rings</h3>
+
         </div>
+
       </div>
+
     </div>
+
   </section>
 
+
+
 </main>
+
+
 
 <!-- ============ SHOP ============ -->
+
 <main id="page-shop" class="page">
+
   <div class="wrap shop-header">
+
     <div class="eyebrow" id="shop-eyebrow">SHOP ALL</div>
+
     <h1 id="shop-title" style="margin-top:16px; font-size:clamp(30px,4vw,44px);">All Kahaanist jewelry.</h1>
+
     <p style="color:var(--parchment-dim); max-width:520px; margin-top:16px; font-weight:300;" id="shop-desc">
+
       Neckpieces, earrings and rings, inspired by mythology and mysticism from around the world. Filter by category below.
+
     </p>
+
     <div class="filter-row" id="filter-row">
+
       <div class="filter-btn" data-filter="all">All</div>
+
       <div class="filter-btn" data-filter="neckpieces">Neckpieces</div>
+
       <div class="filter-btn" data-filter="earrings">Earrings</div>
+
       <div class="filter-btn" data-filter="rings">Finger Rings</div>
+
     </div>
+
   </div>
+
   <div class="wrap">
+
     <div class="product-grid" id="shop-grid"></div>
+
   </div>
+
 </main>
 
+
+
 <!-- ============ CONTACT ============ -->
+
 <main id="page-contact" class="page">
+
   <div class="wrap contact-wrap" style="display:flex; justify-content:center; padding:80px 20px;">
+
     <div class="contact-info reveal" style="text-align:center;">
+
       <div class="eyebrow">GET IN TOUCH</div>
+
       <h1 style="margin-top:16px; font-size:clamp(30px,3.6vw,42px);">Tell us your story.</h1>
+
       
+
       <div class="info-block" style="margin-top:40px;">
+
         <div class="label" style="font-size:14px; letter-spacing:0.1em; color:var(--brass-light); text-transform:uppercase;">Email</div>
+
         <div class="val" style="font-size:20px; font-weight:400; color:var(--parchment); margin-top:8px;">connect@kahaanist.com</div>
+
       </div>
+
       
+
       
+
       
+
       <!-- TODO: Open a WhatsApp Business account and a dedicated phone number. Once active, update this section with those details. -->
+
     </div>
+
   </div>
+
 </main>
+
+
+
 
 
   <!-- ============ PRODUCT PAGE ============ -->
+
   <main id="page-product" class="page">
+
     <div class="wrap">
+
       <a href="/shop" class="cta" style="display:inline-block; margin-top:20px; font-size:14px;">← Back to Shop</a>
+
       <div id="product-container"></div>
+
     </div>
+
   </main>
 
 
+
+
+
 <main id="page-privacy" class="page">
+
   <div class="wrap" style="max-width:800px; padding:80px 20px;">
+
     <h1 style="margin-bottom:30px;">Privacy Policy</h1>
+
     <div style="line-height:1.7; color:var(--parchment-dim);">
+
       <p>We respect your privacy. Kahaanist collects only the information necessary to process your order, communicate with you, and improve your shopping experience.</p>
+
       <p>Your payment information is securely processed by our payment gateways (Razorpay / PayPal / Shopify Payments). We do not store your credit card details.</p>
+
       <p>If you have any questions about how your data is handled, please reach out to us at connect@kahaanist.com.</p>
+
     </div>
+
   </div>
+
 </main>
+
+
 
 <main id="page-terms" class="page">
+
   <div class="wrap" style="max-width:800px; padding:80px 20px;">
+
     <h1 style="margin-bottom:30px;">Terms of Service</h1>
+
     <div style="line-height:1.7; color:var(--parchment-dim);">
+
       <p>By visiting our site and/or purchasing something from us, you engage in our "Service" and agree to be bound by the following terms and conditions.</p>
+
       <p>All our jewelry is handcrafted. Due to the artisanal nature of our products, slight variations in texture, color, and finish may occur. These are not defects but a hallmark of genuine hand-cast brass.</p>
+
       <p>Prices for our products are subject to change without notice.</p>
+
     </div>
+
   </div>
+
 </main>
+
+
 
 <main id="page-refund" class="page">
+
   <div class="wrap" style="max-width:800px; padding:80px 20px;">
+
     <h1 style="margin-bottom:30px;">Refund & Replacement Policy</h1>
+
     <div style="line-height:1.7; color:var(--parchment-dim);">
+
       <p>At Kahaanist, every piece is carefully handcrafted. Due to the personal nature of our jewelry and our commitment to hygiene and quality, <strong>all sales are final and products are non-returnable.</strong></p>
+
       <p><strong>Manufacturing Defects:</strong></p>
+
       <p>We take pride in our craftsmanship. However, if you receive a piece with a genuine manufacturing defect, we will gladly offer a replacement.</p>
+
       <ul style="margin-top:10px; margin-bottom:20px; padding-left:20px;">
+
         <li style="margin-bottom:8px;">You must contact customer care at connect@kahaanist.com within <strong>48 hours</strong> of receiving the package.</li>
+
         <li style="margin-bottom:8px;">Please include your order number, a brief description of the issue, and clear, unedited photographs showing the defect.</li>
+
         <li style="margin-bottom:8px;">Once our quality check team verifies the defect, we will initiate a free replacement for the exact same item.</li>
+
       </ul>
+
       <p><em>Please note that natural tarnishing of brass over time or minor textural variations inherent to the hand-casting process are not considered defects.</em></p>
+
     </div>
+
   </div>
+
 </main>
+
+
 
 <main id="page-shipping" class="page">
+
   <div class="wrap" style="max-width:800px; padding:80px 20px;">
+
     <h1 style="margin-bottom:30px;">Shipping Policy</h1>
+
     <div style="line-height:1.7; color:var(--parchment-dim);">
+
       <p><strong>Domestic (India):</strong><br>We offer <strong>Free Shipping</strong> across India on all orders above ₹2,899. For orders below this threshold, a standard shipping fee applies at checkout.</p>
+
       <p style="margin-top:20px;"><strong>International (Rest of the World):</strong><br>We offer <strong>Free International Shipping</strong> on all orders above US$65. For orders below this amount, international shipping rates will be calculated at checkout based on your location.</p>
+
       <p style="margin-top:20px;"><strong>Processing Time:</strong><br>All orders are processed and dispatched within 3-5 business days. Once shipped, you will receive a tracking link via email.</p>
+
     </div>
+
   </div>
+
 </main>
 
+
+
 <footer>
+
   <div class="wrap footer-grid">
+
     <div class="fcol">
+
       <div class="logo" style="margin-bottom:14px;">KAHAANI<span>ST</span></div>
+
       <p style="color:var(--parchment-dim); font-size:14px; font-weight:300; max-width:260px;">Mythology and mysticism, cast in brass. Handcrafted across India.</p>
+
       <form id="newsletter-form" class="newsletter-row">
+
         <input type="email" id="newsletter-email" placeholder="Get new chapters first" required>
+
         <button type="submit">Join →</button>
+
       </form>
+
       <div id="newsletter-msg" style="font-size:12px; color:var(--brass-light); margin-top:8px; height:15px;"></div>
+
     </div>
+
     <div class="fcol">
+
       <h5>Shop</h5>
+
       <a href="/shop/neckpieces">Neckpieces</a>
+
       <a href="/shop/earrings">Earrings</a>
+
       <a href="/shop/rings">Finger Rings</a>
+
       <a href="/shop">All Products</a>
+
     </div>
+
     <div class="fcol">
+
         <h5>Brand & Legal</h5>
+
         <a href="/">Home</a>
+
         <a href="/contact">Contact / Story</a>
+
         <a href="/privacy">Privacy Policy</a>
+
         <a href="/terms">Terms of Service</a>
+
         <a href="/refund">Refund Policy</a>
+
         <a href="/shipping">Shipping Policy</a>
+
       </div>
+
           <div class="fcol">
+
         <h5>Follow</h5>
+
         <a href="https://www.instagram.com/thekahaanist?igsi=MWd1dmFwbnA2dTZpbA==" target="_blank" rel="noopener noreferrer">Instagram</a>
+
         <a href="https://www.facebook.com/share/19GVioFotP/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">Facebook</a>
+
       </div>
+
   </div>
+
   <div class="wrap footer-bottom">
+
     <div>© 2026 Kahaanist. Handcrafted in India.</div>
+
     <div>Brass jewelry inspired by mythology & mysticism</div>
+
   </div>
+
 </footer>
 
+
+
 <script>
+
   
+
   // ---------- Shopify Integration (Two-Brain: IN + Global) ----------
+
   let shopifyUI;
+
   let isGlobalVisitor = false;
 
+
+
   // Geo-IP detection
+
   async function detectCountry() {
+
     try {
+
       const resp = await fetch('https://ipapi.co/json/', { signal: AbortSignal.timeout(3000) });
+
       const data = await resp.json();
+
       return data.country_code;
+
     } catch(e) {
+
       return 'IN';
+
     }
+
   }
+
+
 
   async function initShopify() {
+
     const country = await detectCountry();
+
     isGlobalVisitor = (country !== 'IN');
 
+
+
     const domain = isGlobalVisitor ? 'kahaanist-global.myshopify.com' : 'kahaanist.myshopify.com';
+
     const token  = isGlobalVisitor ? '2b53a4ed899e25df22ee289a3df89bf0' : 'a644d9e6d80b87611a5f4c9cf0199a5d';
 
+
+
     // Swap prices and Shopify IDs for global visitors
+
     if (isGlobalVisitor) {
+
       shopifyOptions.moneyFormat = 'US$%20%7B%7Bamount%7D%7D';
+
       products.forEach(p => {
+
         if (p.priceGlobal) p.price = p.priceGlobal;
+
         if (p.shopifyIdGlobal) p.shopifyId = p.shopifyIdGlobal;
+
       });
+
       // Re-render current page with USD prices
+
       if(typeof renderHome === 'function') renderHome();
+
       route();
+
     }
 
+
+
     const scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+
     const script = document.createElement('script');
+
     script.async = true;
+
     script.src = scriptURL;
+
     document.head.appendChild(script);
+
     script.onload = () => {
+
       const client = ShopifyBuy.buildClient({
+
         domain: domain,
+
         storefrontAccessToken: token,
+
       });
+
       ShopifyBuy.UI.onReady(client).then((ui) => {
+
         shopifyUI = ui;
+
         renderShopifyButtons();
+
       });
+
     };
+
   }
+
+
 
   // initShopify() deferred
 
+
+
   // Catch CRM and Ads URL Parameters
+
   const urlParams = new URLSearchParams(window.location.search);
+
   const fbclid = urlParams.get('fbclid') || '';
+
   const utm_source = urlParams.get('utm_source') || '';
+
   const utm_medium = urlParams.get('utm_medium') || '';
+
   const utm_campaign = urlParams.get('utm_campaign') || '';
+
   
+
   const customAttributes = [];
+
   if (fbclid) customAttributes.push({ key: "fbclid", value: fbclid });
+
   if (utm_source) customAttributes.push({ key: "utm_source", value: utm_source });
+
   if (utm_medium) customAttributes.push({ key: "utm_medium", value: utm_medium });
+
   if (utm_campaign) customAttributes.push({ key: "utm_campaign", value: utm_campaign });
 
+
+
   const shopifyOptions = {
+
     moneyFormat: 'Rs.%20%7B%7Bamount%7D%7D',
+
     options: {
+
       product: {
+
         contents: { img: false, title: false, price: false },
+
         text: { button: 'Add to Cart' },
+
         styles: {
+
           product: { '@media (min-width: 601px)': { 'max-width': '100%', 'margin': '0' } },
+
           button: {
+
             'background-color': '#b8863b',
+
             'color': '#fff',
+
             'font-family': 'sans-serif',
+
             'border-radius': '2px',
+
             'width': '100%'
+
           }
+
         }
+
       },
+
       cart: { 
+
         text: { total: 'Subtotal', button: 'Checkout' },
+
         customAttributes: customAttributes
+
       }
+
     }
+
   };
 
+
+
   function renderShopifyButtons() {
+
     if (!shopifyUI) return;
+
     document.querySelectorAll('.shopify-buy-container:not(.rendered)').forEach(node => {
+
       const id = node.dataset.shopifyId;
+
       if (id) {
+
         node.classList.add('rendered');
+
         shopifyUI.createComponent('product', {
+
           id: id,
+
           node: node,
+
           moneyFormat: shopifyOptions.moneyFormat,
+
           options: shopifyOptions.options
+
         });
+
       }
+
     });
+
   }
 
+
+
   // ---------- Product data ----------
+
   const products = [
+
     { slug:'tree-of-life-pendant', cat:'neckpieces', gallery: ['tree-of-life.mp4'], name:'Tree of Life Pendant Necklace', price:'₹2,899', quote:'Roots below, branches above — grounded and growing at once.', img:'tree_of_life_solid_black.jpg', shopifyId: '8742902792375', shopifyIdGlobal: '9412329701609', priceGlobal: 'US$65', story: 'The Tree of Life is an ancient symbol found in mythologies from the Norse Yggdrasil to the Celtic Crann Bethadh. It represents the interconnectedness of everything in the universe. We cast this piece in solid brass to give you a wearable reminder to stay grounded in your roots while reaching for what is next.', materials: 'Solid Recycled Brass, 18K Gold Plated finish.', size: 'Pendant diameter: 25mm. Chain length: 18 inches with a 2-inch extender.', shipping: 'Free shipping across India. 7-day hassle-free replacement for any defects.' },
+
     { slug:'mermen-in-love', cat:'neckpieces', name:'Mermen in Love Pendant', price:'₹2,899', quote:'Eternal devotion beneath the waves.', img:'mermen-in-love.webp', shopifyId: '8742908756151', shopifyIdGlobal: '9412331176169', priceGlobal: 'US$65', story: 'A celebration of love in all its forms. Inspired by ancient maritime legends of sirens and mermen, this piece represents a bond that survives the deepest waters and the strongest tides. Wear it as a token of unyielding devotion.', materials: 'Solid Recycled Brass, Hand-painted enamel details.', size: 'Pendant diameter: 30mm. Chain length: 20 inches.', shipping: 'Free shipping across India. 7-day hassle-free replacement.' },
+
     { slug:'medusa-earrings', cat:'earrings', catalogImg: 'Medusa-earrings-model-wearing.png', gallery: ['Medusa-earrings-model-wearing.png', 'medusa-earrings.mp4'], name:'Medusa Earrings', price:'₹4,499', quote:'A gaze that stops time.', img:'Medusa-earrings-black.png', shopifyId: '8733191569591', shopifyIdGlobal: '9412325867753', priceGlobal: 'US$99', story: 'Long misunderstood as a monster, Medusa was originally a protector and a symbol of female rage and power. Her visage was placed on shields and temples to ward off evil. We designed these earrings for the days you need to channel her fierce, unapologetic energy.', materials: 'Solid Recycled Brass. Hypoallergenic posts.', size: 'Drop length: 45mm. Width: 30mm.', shipping: 'Free shipping across India. 7-day hassle-free replacement.' },
+
     { slug:'mermaids-in-love-pendant', cat:'neckpieces', name:'Mermaids in Love Pendant Necklace', price:'₹2,899', quote:'A subtle nod to infinite romance.', img:'Photoroom_20260825_140537.webp', shopifyId: '8742905446583', shopifyIdGlobal: '9412330586345', priceGlobal: 'US$65', story: 'Reflecting the gentle and protective nature of the ocean\'s guardians, this pendant symbolizes a quiet but infinite romance. Designed for those who carry the sea in their hearts.', materials: 'Solid Recycled Brass.', size: 'Pendant diameter: 30mm. Chain length: 20 inches.', shipping: 'Free shipping across India. 7-day hassle-free replacement.' },
+
     { slug:'ouroboros-pendant', cat:'neckpieces', gallery: ['ouroboros-pendant.mp4'], name:'Ouroboros Pendant Necklace', price:'₹2,899', quote:'A cycle you wear, not just believe in.', img:'Photoroom_20260823_140048.webp', shopifyId: '8742904332471', shopifyIdGlobal: '9412331962601', priceGlobal: 'US$65', story: 'The Ouroboros—a serpent eating its own tail—is one of the oldest mystical symbols in the world. It represents eternity, the cycle of life and death, and constant recreation. This ring is cast to wrap continuously around your finger as a daily talisman of renewal.', materials: 'Solid Recycled Brass.', size: 'Available in US sizes 5 through 9.', shipping: 'Free shipping across India. 7-day hassle-free replacement.' },
+
   ];
+
+
 
   const catLabel = { neckpieces:'Neckpiece', earrings:'Earring', rings:'Finger Ring' };
 
+
+
   function productCardHTML(p){
+
     const imgSrc = p.catalogImg || p.img;
+
     const imageContent = imgSrc
+
       ? `<img src="${imgSrc}" alt="${p.name} — brass ${catLabel[p.cat].toLowerCase()} inspired by mythology" loading="lazy">`
+
       : `<svg viewBox="0 0 100 100" fill="none"><circle cx="50" cy="50" r="34" stroke="#d9ab5f" stroke-width="1.2"/><circle cx="50" cy="50" r="20" stroke="#efe6d3" stroke-opacity="0.5" stroke-width="1"/><path d="M50 16 L50 84 M16 50 L84 50" stroke="#2f4a3e" stroke-width="1"/></svg>`;
+
     
+
     return `
+
       <div class="product-card">
+
         <div class="product-flip">
+
           <div class="product-face product-front">
+
             <a href="/product/${p.slug}" class="product-image" style="display:block; text-decoration:none;">
+
               ${imageContent}
+
             </a>
+
             <div class="product-info">
+
               <div class="cat">${catLabel[p.cat]}</div>
+
               <a href="/product/${p.slug}" style="text-decoration:none; color:inherit;"><h4>${p.name}</h4></a>
+
               <div class="price">${p.price}</div>
+
               ${p.shopifyId 
+
                 ? `<div class="shopify-buy-container" data-shopify-id="${p.shopifyId}" style="margin-top:12px;"></div>` 
+
                 : `<div class="cta" style="margin-top:12px; color:var(--parchment-dim);">Coming Soon</div>`
+
               }
+
             </div>
+
           </div>
+
           <div class="product-face product-back">
+
             <div class="quote">"${p.quote}"</div>
+
           </div>
+
         </div>
+
       </div>`;
+
   }
+
+
 
   function renderHome() {
+
     const container = document.getElementById('home-featured');
+
     if (container) container.innerHTML = products.slice(0, 6).map(productCardHTML).join('');
+
   }
+
   renderHome();
 
+
+
   function renderShop(filter){
+
     const grid = document.getElementById('shop-grid');
+
     const list = filter === 'all' ? products : products.filter(p => p.cat === filter);
+
     grid.innerHTML = list.map(productCardHTML).join('');
+
     document.querySelectorAll('.filter-btn').forEach(b=>{
+
       b.classList.toggle('active', b.dataset.filter === filter);
+
     });
+
   }
+
+
 
   document.querySelectorAll('.filter-btn').forEach(btn=>{
+
     btn.addEventListener('click', ()=>{
+
       navigateTo(btn.dataset.filter === 'all' ? '/shop' : '/shop/' + btn.dataset.filter);
+
     });
+
   });
+
+
 
   // ---------- Simple router ----------
+
   const shopMeta = {
+
     all: { eyebrow:'SHOP ALL', title:'All Kahaanist jewelry.', desc:'Neckpieces, earrings and rings, inspired by mythology and mysticism from around the world.' },
+
     neckpieces: { eyebrow:'NECKPIECES', title:'Shop Neckpieces', desc:'Chokers and pendants featuring the Tree of Life, Medusa, the Ouroboros and other symbols of protection and growth.' },
+
     earrings: { eyebrow:'EARRINGS', title:'Shop Earrings', desc:'Hoops and drops shaped around Medusa, the Ouroboros and other mythological icons.' },
+
     rings: { eyebrow:'FINGER RINGS', title:'Shop Finger Rings', desc:'Signets and bands carrying small, everyday symbols of strength, protection and eternity.' },
+
   };
+
+
 
   const pageTitles = {
+
     '/': "Kahaanist - Wearable Lore",
+
     '/shop': "Shop All - Kahaanist - Wearable Lore",
+
     '/shop/neckpieces': "Neckpieces — Mythology-Inspired Brass Necklaces | Kahaanist",
+
     '/shop/earrings': "Earrings — Mythology-Inspired Brass Earrings | Kahaanist",
+
     '/shop/rings': "Finger Rings — Mythology-Inspired Brass Rings | Kahaanist",
+
     '/contact': "Contact Kahaanist — Brass Jewelry, Shipping Across India",
+
   };
 
+
+
   
+
   function toggleSpec(el){
+
     el.classList.toggle('active');
+
   }
+
+
 
   function findProductBySlug(slug){
+
     if (!slug) return null;
+
     const s = slug.toLowerCase().trim();
+
     // 1. Direct match
+
     let p = products.find(x => x.slug === s);
+
     if (p) return p;
+
     // 2. Prefix / alias / stem match (e.g. 'medusa' -> 'medusa-earrings')
+
     p = products.find(x => x.slug.startsWith(s) || s.startsWith(x.slug.split('-')[0]));
+
     return p || null;
+
   }
+
+
 
   function renderProductPage(slug){
+
     const p = findProductBySlug(slug);
+
     if(!p) {
+
         navigateTo('/shop');
+
         return;
+
     }
+
     
+
     // Meta Pixel Tracking
+
     if (typeof fbq !== 'undefined') {
+
       fbq('track', 'ViewContent', {
+
         content_name: p.name,
+
         content_category: p.cat,
+
         value: p.price.replace(/[^0-9.]/g, ''),
+
         currency: 'INR'
+
       });
+
     }
+
     const container = document.getElementById('product-container');
+
           let mediaArray = [];
+
       if (p.img) mediaArray.push(p.img);
+
       if (p.gallery) mediaArray = mediaArray.concat(p.gallery);
+
       
+
       let activeMediaHTML = '';
+
       if (mediaArray.length > 0) {
+
           let first = mediaArray[0];
+
           if (first.endsWith('.mp4') || first.endsWith('.webm')) {
+
               activeMediaHTML = `<video id="main-display-video" src="${first}" autoplay loop muted playsinline class="main-image"></video>
+
                                  <img id="main-display-img" class="main-image" style="display:none;">`;
+
           } else {
+
               activeMediaHTML = `<img id="main-display-img" src="${first}" class="main-image">
+
                                  <video id="main-display-video" autoplay loop muted playsinline class="main-image" style="display:none;"></video>`;
+
           }
+
       }
+
       
+
       let thumbnailsHTML = '';
+
       mediaArray.forEach((asset, idx) => {
+
           let thumbContent = (asset.endsWith('.mp4') || asset.endsWith('.webm'))
+
                ? `<div style="position:relative; width:100%; height:100%;">
+
                     <video src="${asset}#t=0.1" muted playsinline style="width:100%; height:100%; object-fit:cover; pointer-events:none;"></video>
+
                     <div style="position:absolute; top:0; left:0; width:100%; height:100%; display:flex; align-items:center; justify-content:center; background:rgba(0,0,0,0.25);">
+
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="#efe6d3"><path d="M8 5v14l11-7z"/></svg>
+
                     </div>
+
                   </div>`
+
                : `<img src="${asset}" style="width:100%; height:100%; object-fit:cover;">`;
+
           
+
           thumbnailsHTML += `<div class="thumb" onclick="window.swapMedia('${asset}')" style="cursor:pointer; overflow:hidden;">${thumbContent}</div>`;
+
       });
+
       
+
       if (!window.swapMedia) {
+
           window.swapMedia = function(asset) {
+
               const imgEl = document.getElementById('main-display-img');
+
               const vidEl = document.getElementById('main-display-video');
+
               if(asset.endsWith('.mp4') || asset.endsWith('.webm')) {
+
                   imgEl.style.display = 'none';
+
                   vidEl.src = asset;
+
                   vidEl.style.display = 'block';
+
                   vidEl.play();
+
               } else {
+
                   vidEl.style.display = 'none';
+
                   vidEl.pause();
+
                   imgEl.src = asset;
+
                   imgEl.style.display = 'block';
+
               }
+
           };
+
       }
+
       
+
       container.innerHTML = `
+
         <div class="product-page-layout">
+
           <div class="product-page-gallery" style="display:flex; flex-direction:column; gap:16px;">
+
             ${activeMediaHTML}
+
             <div class="thumbnails" style="display:flex; gap:12px;">
+
                 ${thumbnailsHTML}
+
             </div>
+
           </div>
+
         <div class="product-page-info">
+
           <div class="cat" style="margin-bottom:8px;">${catLabel[p.cat]}</div>
+
           <h1>${p.name}</h1>
+
           <div class="product-page-price">${p.price}</div>
+
           
+
           <div class="product-buy-form">
+
             ${p.shopifyId 
+
                 ? `<div class="shopify-buy-container" data-shopify-id="${p.shopifyId}"></div>` 
+
                 : `<div class="btn btn-primary" style="opacity:0.5; cursor:not-allowed;">Product currently unavailable</div>`
+
             }
+
               <div style="font-size:13px; color:var(--parchment-dim); text-align:left; margin-top:12px;">${isGlobalVisitor ? 'Secure checkout. International shipping included.' : 'Secure checkout. Free shipping across India.'}</div>
+
           </div>
+
+
 
           <div class="product-story">
+
             <strong style="color:var(--brass-light); display:block; margin-bottom:12px;">The Myth</strong>
+
             ${p.story || p.quote}
+
           </div>
+
+
 
           <div class="product-specs">
+
             <div class="spec-item" onclick="toggleSpec(this)">
+
               <h4>Material & Craftsmanship</h4>
+
               <span style="font-size:20px; color:var(--brass-light);">+</span>
+
             </div>
+
             <div class="spec-content">${p.materials || 'Solid brass. Handcrafted in India.'}</div>
+
             
+
             <div class="spec-item" onclick="toggleSpec(this)">
+
               <h4>Size & Fit</h4>
+
               <span style="font-size:20px; color:var(--brass-light);">+</span>
+
             </div>
+
             <div class="spec-content">${p.size || 'One size fits most.'}</div>
+
             
+
             <div class="spec-item" onclick="toggleSpec(this)">
+
               <h4>Shipping & Returns</h4>
+
               <span style="font-size:20px; color:var(--brass-light);">+</span>
+
             </div>
+
             <div class="spec-content">${p.shipping || 'Free shipping across India. 7-day hassle-free replacement policy.'}</div>
+
           </div>
+
+
 
           <div style="margin-top:60px; padding-top:40px; border-top:1px solid var(--ink-soft);">
+
             <h4 style="margin-bottom:20px; color:var(--brass-light);">Seen On</h4>
+
             <div style="display:flex; gap:12px; overflow-x:auto; padding-bottom:12px;">
+
                 <div style="width:120px; height:150px; background:var(--ink-soft); flex-shrink:0; border-radius:4px; display:flex; align-items:center; justify-content:center; color:var(--parchment-dim); font-size:12px; text-align:center;">Community<br>Photo 1</div>
+
                 <div style="width:120px; height:150px; background:var(--ink-soft); flex-shrink:0; border-radius:4px; display:flex; align-items:center; justify-content:center; color:var(--parchment-dim); font-size:12px; text-align:center;">Community<br>Photo 2</div>
+
                 <div style="width:120px; height:150px; background:var(--ink-soft); flex-shrink:0; border-radius:4px; display:flex; align-items:center; justify-content:center; color:var(--parchment-dim); font-size:12px; text-align:center;">Community<br>Photo 3</div>
+
             </div>
+
           </div>
 
+
+
         </div>
+
       </div>
+
     `;
+
     document.title = p.name + " | Kahaanist";
+
     window.scrollTo(0,0);
+
   }
+
+
 
   // ---------- Router & SEO Metadata Helpers ----------
+
   function getNormalizedPath() {
+
     if (typeof window === 'undefined') return '/';
+
     // Legacy hash redirect support: #/shop -> /shop
+
     if (window.location && window.location.hash && window.location.hash.startsWith('#/')) {
+
       const hashPath = window.location.hash.slice(1);
+
       if (window.history && window.history.replaceState) {
+
         window.history.replaceState(null, '', hashPath);
+
       }
+
       return hashPath;
+
     }
+
     let p = (window.location && window.location.pathname) ? window.location.pathname : '/';
+
     if (p.length > 1 && p.endsWith('/')) p = p.slice(0, -1);
+
     return p;
+
   }
+
+
 
   function navigateTo(url) {
+
     if (typeof window === 'undefined') return;
+
     let target = url;
+
     if (target.length > 1 && target.endsWith('/')) target = target.slice(0, -1);
+
     const current = (window.location && window.location.pathname) ? window.location.pathname : '/';
+
     if (current !== target) {
+
       if (window.history && window.history.pushState) {
+
         window.history.pushState(null, '', target);
+
       }
+
       route();
+
     }
+
   }
+
+
 
   function updateSEOMetadata(path) {
+
     if (typeof document === 'undefined') return;
+
     let title = pageTitles[path] || pageTitles[Object.keys(pageTitles).find(k => k !== '/' && path.startsWith(k))] || pageTitles['/'];
+
     let desc = "Kahaanist crafts handcrafted brass jewelry inspired by mythology and mysticism. Shop the Medusa, Ouroboros, and Tree of Life collections.";
 
+
+
     if (path.startsWith('/product/')) {
+
       const rawSlug = path.replace('/product/', '').split('/')[0];
+
       const p = findProductBySlug(rawSlug);
+
       if (p) {
+
         title = `${p.name} | Kahaanist Brass Jewelry`;
+
         desc = `${p.name} handcrafted in solid recycled brass. ${p.quote}`;
+
         updateProductSchema(p);
+
       }
+
     } else if (path.startsWith('/shop')) {
+
       const parts = path.split('/').filter(Boolean);
+
       const filter = parts[1] || 'all';
+
       const meta = shopMeta[filter] || shopMeta.all;
+
       desc = `${meta.title} — ${meta.desc}`;
+
     }
+
+
 
     document.title = title;
+
     const descEl = document.getElementById('meta-desc') || (document.querySelector && document.querySelector('meta[name="description"]'));
+
     if (descEl && typeof descEl.setAttribute === 'function') {
+
       descEl.setAttribute('content', desc);
+
     }
+
+
 
     let canonical = document.querySelector ? document.querySelector('link[rel="canonical"]') : null;
+
     if (!canonical && document.createElement && document.head && document.head.appendChild) {
+
       canonical = document.createElement('link');
+
       if (typeof canonical.setAttribute === 'function') {
+
         canonical.setAttribute('rel', 'canonical');
+
       }
+
       document.head.appendChild(canonical);
+
     }
+
     if (canonical && typeof canonical.setAttribute === 'function') {
+
       canonical.setAttribute('href', 'https://kahaanist.com' + (path === '/' ? '' : path));
+
     }
+
   }
+
+
 
   function updateProductSchema(p) {
+
     if (typeof document === 'undefined') return;
+
     let schemaScript = document.getElementById('product-schema-jsonld');
+
     if (!schemaScript && document.createElement && document.head && document.head.appendChild) {
+
       schemaScript = document.createElement('script');
+
       schemaScript.id = 'product-schema-jsonld';
+
       schemaScript.type = 'application/ld+json';
+
       document.head.appendChild(schemaScript);
+
     }
+
     if (schemaScript) {
+
       const cleanPrice = p.price ? p.price.replace(/[^0-9.]/g, '') : '';
+
       const isGlobal = (typeof isGlobalVisitor !== 'undefined') ? isGlobalVisitor : false;
+
       schemaScript.textContent = JSON.stringify({
+
         "@context": "https://schema.org/",
+
         "@type": "Product",
+
         "name": p.name,
+
         "image": [`https://kahaanist.com/${p.img}`],
+
         "description": p.story || p.quote,
+
         "brand": { "@type": "Brand", "name": "Kahaanist" },
+
         "material": p.materials || "Solid Recycled Brass",
+
         "offers": {
+
           "@type": "Offer",
+
           "url": `https://kahaanist.com/product/${p.slug}`,
+
           "priceCurrency": isGlobal ? "USD" : "INR",
+
           "price": cleanPrice,
+
           "availability": "https://schema.org/InStock"
+
         }
+
       }, null, 2);
+
     }
+
   }
+
+
 
   function route(){
+
     const path = getNormalizedPath();
+
     if (document.querySelectorAll) {
+
       document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+
       document.querySelectorAll('.navlinks a').forEach(a=>a.classList.remove('active'));
+
     }
+
+
 
     if(path === '/privacy'){
+
       const el = document.getElementById('page-privacy');
+
       if (el) el.classList.add('active');
+
     } else if(path === '/terms'){
+
       const el = document.getElementById('page-terms');
+
       if (el) el.classList.add('active');
+
     } else if(path === '/refund'){
+
       const el = document.getElementById('page-refund');
+
       if (el) el.classList.add('active');
+
     } else if(path === '/shipping'){
+
       const el = document.getElementById('page-shipping');
+
       if (el) el.classList.add('active');
+
     } else if(path.startsWith('/product/')){
+
       const el = document.getElementById('page-product');
+
       if (el) el.classList.add('active');
+
       const slug = path.replace('/product/', '').split('/')[0];
+
       renderProductPage(slug);
+
       setTimeout(renderShopifyButtons, 100);
+
     } else if(path.startsWith('/shop')){
+
       const el = document.getElementById('page-shop');
+
       if (el) el.classList.add('active');
+
       const shopNav = document.querySelector ? document.querySelector('[data-route="/shop"]') : null;
+
       if(shopNav){
+
         shopNav.classList.add('active');
+
       }
+
       const parts = path.split('/').filter(Boolean); // ['shop','neckpieces'?]
+
       const filter = parts[1] || 'all';
+
       const meta = shopMeta[filter] || shopMeta.all;
+
       const eyebrowEl = document.getElementById('shop-eyebrow');
+
       if (eyebrowEl) eyebrowEl.textContent = meta.eyebrow;
+
       const titleEl = document.getElementById('shop-title');
+
       if (titleEl) titleEl.textContent = meta.title;
+
       const descEl = document.getElementById('shop-desc');
+
       if (descEl) descEl.textContent = meta.desc;
+
       renderShop(filter);
+
       setTimeout(renderShopifyButtons, 100);
+
     } else if(path.startsWith('/contact')){
+
       const el = document.getElementById('page-contact');
+
       if (el) el.classList.add('active');
+
       const contactNav = document.querySelector ? document.querySelector('[data-route="/contact"]') : null;
+
       if(contactNav){
+
         contactNav.classList.add('active');
+
       }
+
     } else {
+
       const el = document.getElementById('page-home');
+
       if (el) el.classList.add('active');
+
       const homeNav = document.querySelector ? document.querySelector('[data-route="/"]') : null;
+
       if(homeNav){
+
         homeNav.classList.add('active');
+
       }
+
     }
+
+
 
     updateSEOMetadata(path);
+
     if (typeof window !== 'undefined' && window.scrollTo) window.scrollTo(0,0);
+
     setTimeout(revealOnScroll, 50);
 
+
+
     // Track SPA Navigation in GA4 and Meta Pixel
+
     if (typeof gtag === 'function') {
+
       gtag('config', 'G-X23C2W02PM', { 'page_path': path });
+
     }
+
     if (typeof fbq === 'function') {
+
       fbq('track', 'PageView');
+
     }
+
   }
+
+
 
   // Global delegated click listener for internal links
+
   if (typeof document !== 'undefined' && document.addEventListener) {
+
     document.addEventListener('click', (e) => {
+
       const a = e.target && e.target.closest ? e.target.closest('a') : null;
+
       if (!a) return;
+
       const href = a.getAttribute('href');
+
       if (!href) return;
+
       if (
+
         href.startsWith('http://') || 
+
         href.startsWith('https://') || 
+
         href.startsWith('mailto:') || 
+
         href.startsWith('tel:') || 
+
         href.startsWith('#') ||
+
         a.target === '_blank' ||
+
         e.metaKey || e.ctrlKey || e.shiftKey || e.altKey
+
       ) {
+
         return;
+
       }
+
       if (href.startsWith('/')) {
+
         e.preventDefault();
+
         navigateTo(href);
+
       }
+
     });
+
   }
+
+
 
   if (typeof window !== 'undefined' && window.addEventListener) {
+
     window.addEventListener('popstate', route);
+
     window.addEventListener('hashchange', route);
+
   }
+
   route();
 
+
+
   // Now that products[] and route() exist, init Two-Brain
+
   initShopify();
 
+
+
   // ---------- Reveal on scroll ----------
+
   function revealOnScroll(){
+
     const els = document.querySelectorAll('.reveal:not(.in)');
+
     const io = new IntersectionObserver((entries)=>{
+
       entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+
     }, { threshold:0.15 });
+
     els.forEach(el=>io.observe(el));
+
   }
+
   revealOnScroll();
 
+
+
   // ---------- Contact form (demo only) ----------
+
   function handleContactSubmit(e){
+
     e.preventDefault();
+
     document.getElementById('form-note').textContent = "Thanks — this is a design preview, so nothing was actually sent yet.";
+
   }
+
   // ---------- Newsletter form (CRM) ----------
+
   document.getElementById('newsletter-form').addEventListener('submit', async (e) => {
+
     e.preventDefault();
+
     const email = document.getElementById('newsletter-email').value;
+
     const msg = document.getElementById('newsletter-msg');
+
     msg.style.color = "var(--brass-light)";
+
     msg.textContent = "Loading...";
+
     try {
+
       // ----------------------------------------------------
+
       // KLAVIYO INTEGRATION:
+
       // ----------------------------------------------------
+
       const res = await fetch('https://a.klaviyo.com/client/subscriptions/?company_id=Vxi4aX', {
+
         method: 'POST',
+
         headers: { 'Content-Type': 'application/json', 'revision': '2024-02-15' },
+
         body: JSON.stringify({
+
           data: {
+
             type: "subscription",
+
             attributes: { 
+
               custom_source: "Website_Footer", 
+
               profile: { 
+
                 data: { 
+
                   type: "profile", 
+
                   attributes: { email: email } 
+
                 } 
+
               } 
+
             },
+
             relationships: { list: { data: { type: "list", id: "XtyGg5" } } }
+
           }
+
         })
+
       });
+
       
+
       if(res.ok || res.status === 202) {
+
         msg.textContent = "Welcome to the legend. Check your inbox for your 10% off code.";
+
       } else {
+
         msg.textContent = "Welcome to the legend. Check your inbox for your 10% off code."; // Graceful fallback
+
       }
+
     } catch(err) {
+
       // If backend is offline, simulate success for UX
+
       msg.textContent = "Welcome to the legend. Use code MYTH10 for 10% off.";
+
       console.log("Saved locally (server offline):", email);
+
     }
+
   });
+
 </script>
 
+
+
 <!-- ============ CHATBOT ============ -->
+
 <style>
+
   #kahaanist-chat-widget {
+
     position: fixed;
+
     bottom: 24px;
+
     right: 24px;
+
     z-index: 1000;
+
     font-family: 'Work Sans', sans-serif;
+
   }
+
   #chat-toggle-btn {
+
     width: 60px;
+
     height: 60px;
+
     border-radius: 50%;
+
     background: var(--brass);
+
     color: var(--ink);
+
     border: none;
+
     box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+
     cursor: pointer;
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
+
     transition: transform 0.2s;
+
   }
+
   #chat-toggle-btn:hover {
+
     transform: scale(1.05);
+
   }
+
   #chat-toggle-btn svg {
+
     width: 28px;
+
     height: 28px;
+
     fill: currentColor;
+
   }
+
   #chat-window {
+
     display: none;
+
     position: absolute;
+
     bottom: 80px;
+
     right: 0;
+
     width: 340px;
+
     height: 480px;
+
     background: var(--ink-soft);
+
     border: 1px solid var(--line);
+
     border-radius: 8px;
+
     flex-direction: column;
+
     box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+
     overflow: hidden;
+
   }
+
   #chat-window.open {
+
     display: flex;
+
   }
+
   #chat-header {
+
     background: var(--ink);
+
     padding: 16px;
+
     border-bottom: 1px solid var(--line);
+
     display: flex;
+
     justify-content: space-between;
+
     align-items: center;
+
   }
+
   #chat-header h3 {
+
     margin: 0;
+
     font-family: 'Cinzel', serif;
+
     font-size: 16px;
+
     color: var(--brass-light);
+
   }
+
   #chat-close-btn {
+
     background: none;
+
     border: none;
+
     color: var(--parchment-dim);
+
     cursor: pointer;
+
     font-size: 20px;
+
   }
+
   #chat-messages {
+
     flex: 1;
+
     padding: 16px;
+
     overflow-y: auto;
+
     display: flex;
+
     flex-direction: column;
+
     gap: 12px;
+
   }
+
   .chat-msg {
+
     max-width: 85%;
+
     padding: 10px 14px;
+
     border-radius: 6px;
+
     font-size: 14px;
+
     line-height: 1.4;
+
   }
+
   .msg-bot {
+
     background: var(--teal);
+
     color: var(--parchment);
+
     align-self: flex-start;
+
     border-bottom-left-radius: 0;
+
   }
+
   .msg-user {
+
     background: var(--brass);
+
     color: var(--ink);
+
     align-self: flex-end;
+
     border-bottom-right-radius: 0;
+
   }
+
   #chat-input-area {
+
     padding: 12px;
+
     border-top: 1px solid var(--line);
+
     display: flex;
+
     gap: 8px;
+
     background: var(--ink);
+
   }
+
   #chat-input {
+
     flex: 1;
+
     background: transparent;
+
     border: 1px solid var(--line);
+
     border-radius: 4px;
+
     padding: 8px 12px;
+
     color: var(--parchment);
+
     font-family: inherit;
+
     font-size: 14px;
+
     outline: none;
+
   }
+
   #chat-input:focus {
+
     border-color: var(--brass-light);
+
   }
+
   #chat-send-btn {
+
     background: var(--brass);
+
     color: var(--ink);
+
     border: none;
+
     border-radius: 4px;
+
     padding: 0 16px;
+
     cursor: pointer;
+
     font-weight: 500;
+
   }
+
 </style>
 
+
+
 <div id="kahaanist-chat-widget">
+
   <div id="chat-window">
+
     <div id="chat-header">
+
       <h3>Kahaanist Guide</h3>
+
       <button id="chat-close-btn">&times;</button>
+
     </div>
+
     <div id="chat-messages">
+
       <div class="chat-msg msg-bot">Hello! Do you have any questions about our jewelry or the mythology behind it?</div>
+
     </div>
+
     <div id="chat-input-area">
+
       <input type="text" id="chat-input" placeholder="Ask about our pieces...">
+
       <button id="chat-send-btn">Send</button>
+
     </div>
+
   </div>
+
   <button id="chat-toggle-btn">
+
     <svg viewBox="0 0 24 24"><path d="M20 2H4C2.9 2 2 2.9 2 4V22L6 18H20C21.1 18 22 17.1 22 16V4C22 2.9 21.1 2 20 2ZM20 16H5.17L4 17.17V4H20V16Z"/></svg>
+
   </button>
+
 </div>
 
+
+
 <script>
+
   const chatToggleBtn = document.getElementById('chat-toggle-btn');
+
   const chatCloseBtn = document.getElementById('chat-close-btn');
+
   const chatWindow = document.getElementById('chat-window');
+
   const chatInput = document.getElementById('chat-input');
+
   const chatSendBtn = document.getElementById('chat-send-btn');
+
   const chatMessages = document.getElementById('chat-messages');
+
+
 
   let chatHistory = "You are a customer support chatbot for Kahaanist, a slow-fashion jewelry brand creating handcrafted solid brass pieces inspired by global mythology, mysticism, and folklore. You know the brand inside and out. Be concise, polite, and mystical.\\n";
 
+
+
   function toggleChat() {
+
     chatWindow.classList.toggle('open');
+
   }
+
   chatToggleBtn.addEventListener('click', toggleChat);
+
   chatCloseBtn.addEventListener('click', toggleChat);
 
+
+
   async function sendMessage() {
+
     const text = chatInput.value.trim();
+
     if (!text) return;
+
     
+
     appendMessage(text, 'user');
+
     chatInput.value = '';
+
     
+
     const loadingId = 'loading-' + Date.now();
+
     appendMessage("...", 'bot', loadingId);
+
     
+
     const prompt = chatHistory + "\\nUser: " + text + "\\nGuide:";
 
+
+
     try {
+
       // Pointing to the Cloudflare Worker instead of localhost!
+
       // Replace this URL with your actual deployed Worker URL when ready.
+
       const WORKER_URL = 'https://kahaanist-chatbot.ara-tarannum.workers.dev';
+
       
+
       const response = await fetch(WORKER_URL, {
+
         method: 'POST',
+
         headers: { 'Content-Type': 'application/json' },
+
         body: JSON.stringify({ prompt: prompt })
+
       });
+
       
+
       const data = await response.json();
+
       const reply = data.response;
+
       
+
       chatHistory += "\\nUser: " + text + "\\nGuide: " + reply;
+
       
+
       document.getElementById(loadingId).innerText = reply;
+
       scrollChat();
+
     } catch (e) {
+
       document.getElementById(loadingId).innerText = "I'm sorry, I seem to be disconnected from the ancient realms at the moment.";
+
     }
+
   }
+
+
 
   function appendMessage(text, sender, id = null) {
+
     const msgDiv = document.createElement('div');
+
     msgDiv.className = 'chat-msg msg-' + sender;
+
     msgDiv.innerText = text;
+
     if (id) msgDiv.id = id;
+
     chatMessages.appendChild(msgDiv);
+
     scrollChat();
+
   }
+
+
 
   function scrollChat() {
+
     chatMessages.scrollTop = chatMessages.scrollHeight;
+
   }
 
+
+
   chatSendBtn.addEventListener('click', sendMessage);
+
   chatInput.addEventListener('keypress', (e) => {
+
     if (e.key === 'Enter') sendMessage();
+
+  });
+
+</script>
+
+
+
+<!-- Join Modal -->
+<div id="join-modal" class="modal-overlay">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeJoinModal()"></button>
+    <h3>Join the Coven</h3>
+    <p>Sign up to get early access to new mythological releases, exclusive lore, and brand updates.</p>
+    <form id="join-modal-form">
+      <div class="input-group">
+        <label for="join-email">Email Address</label>
+        <input type="email" id="join-email" placeholder="you@example.com" />
+      </div>
+      <div class="input-group">
+        <label for="join-phone">Phone Number (Optional)</label>
+        <input type="tel" id="join-phone" placeholder="+91 9876543210" />
+      </div>
+      <button type="submit" class="btn btn-primary" style="width:100%; margin-top:16px;">Subscribe</button>
+      <div id="join-modal-msg" style="font-size:13px; color:var(--brass-light); margin-top:12px; text-align:center; height:15px;"></div>
+    </form>
+  </div>
+</div>
+
+<style>
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(10, 10, 10, 0.85);
+  backdrop-filter: blur(4px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+.modal-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+.modal-content {
+  background: #111;
+  border: 1px solid var(--brass);
+  padding: 40px;
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+  transform: translateY(20px);
+  transition: transform 0.3s ease;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+}
+.modal-overlay.active .modal-content {
+  transform: translateY(0);
+}
+.modal-close {
+  position: absolute;
+  top: 16px; right: 20px;
+  background: none; border: none;
+  color: var(--parchment-dim);
+  font-size: 28px;
+  cursor: pointer;
+  line-height: 1;
+}
+.modal-close:hover { color: var(--brass-light); }
+.modal-content h3 {
+  color: var(--brass-light);
+  font-size: 22px;
+  margin-bottom: 12px;
+  letter-spacing: 0.05em;
+}
+.modal-content p {
+  color: var(--parchment-dim);
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+.input-group {
+  margin-bottom: 16px;
+  text-align: left;
+}
+.input-group label {
+  display: block;
+  font-size: 12px;
+  color: var(--parchment);
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.input-group input {
+  width: 100%;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--line);
+  color: var(--parchment);
+  padding: 12px 14px;
+  font-family: inherit;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.input-group input:focus {
+  border-color: var(--brass-light);
+}
+.navcta {
+  background: transparent;
+  color: var(--brass-light);
+  border: 1px solid var(--brass-dark);
+  padding: 8px 16px;
+  font-family: inherit;
+  font-size: 13px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.navcta:hover {
+  background: rgba(184, 134, 59, 0.1);
+  border-color: var(--brass-light);
+}
+</style>
+
+<script>
+  function openJoinModal() {
+    document.getElementById('join-modal').classList.add('active');
+    localStorage.setItem('kahaanist_popup_seen', 'true');
+  }
+  function closeJoinModal() {
+    document.getElementById('join-modal').classList.remove('active');
+  }
+  
+  // Optional delayed auto-popup for lead generation
+  window.addEventListener('load', () => {
+    if (!localStorage.getItem('kahaanist_popup_seen')) {
+      setTimeout(() => {
+        if (!document.getElementById('join-modal').classList.contains('active')) {
+          openJoinModal();
+        }
+      }, 12000); // 12 seconds
+    }
+  });
+
+  document.getElementById('join-modal-form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const email = document.getElementById('join-email').value;
+    const phone = document.getElementById('join-phone').value;
+    if(!email && !phone) {
+        document.getElementById('join-modal-msg').innerText = 'Please provide an email or phone.';
+        return;
+    }
+    // Simulate API call
+    document.getElementById('join-modal-msg').innerText = 'Welcome to the lore...';
+    setTimeout(() => { closeJoinModal(); }, 1500);
   });
 </script>
 
 </body>
 </html>
+
+
+
+
+
