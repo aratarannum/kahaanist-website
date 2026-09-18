@@ -26,9 +26,10 @@ fbq('track', 'PageView');
 <!-- End Meta Pixel Code -->
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kahaanist – Mythology & Mysticism Inspired Brass Jewelry</title>
-<meta id="meta-desc" name="description" content="Kahaanist crafts handcrafted brass jewelry inspired by mythology and mysticism. Shop the Medusa, Ouroboros, and Tree of Life collections.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<base href="/">
+<title>Kahaanist - Wearable Lore</title>
+<meta id="meta-desc" name="description" content="Kahaanist creates wearable lore—mythology-inspired brass jewelry. Discover the Medusa, Sun, and Tree of Life collections.">
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website">
@@ -440,20 +441,20 @@ fbq('track', 'PageView');
     }).catch(() => {});
 </script>
   <nav class="wrap">
-    <a href="#/" class="logo">KAHAANI<span>ST</span></a>
+    <a href="/" class="logo">KAHAANI<span>ST</span></a>
     <div class="navlinks">
-      <a href="#/" data-route="/">Home</a>
+      <a href="/" data-route="/">Home</a>
       <div class="dropdown">
-        <a href="#/shop" data-route="/shop">Shop</a>
+        <a href="/shop" data-route="/shop">Shop</a>
         <div class="dropdown-menu">
-          <a href="#/shop/neckpieces">Neckpieces</a>
-          <a href="#/shop/earrings">Earrings</a>
-          <a href="#/shop/rings">Finger Rings</a>
+          <a href="/shop/neckpieces">Neckpieces</a>
+          <a href="/shop/earrings">Earrings</a>
+          <a href="/shop/rings">Finger Rings</a>
         </div>
       </div>
-      <a href="#/contact" data-route="/contact">Contact</a>
+      <a href="/contact" data-route="/contact">Contact</a>
     </div>
-    <a href="#/shop" class="navcta">Shop the Myths</a>
+    <a href="/shop" class="navcta">Shop the Myths</a>
   </nav>
 </header>
 
@@ -466,7 +467,7 @@ fbq('track', 'PageView');
         <div class="eyebrow">HANDCRAFTED BRASS JEWELRY</div>
         <h1>Wearable Lore.</h1>
         <div class="btn-row">
-          <a href="#/shop" class="btn btn-primary">Shop Now</a>
+          <a href="/shop" class="btn btn-primary">Shop Now</a>
         </div>
       </div>
     </div>
@@ -488,7 +489,7 @@ fbq('track', 'PageView');
   <section style="padding-top:0; padding-bottom:100px;">
     <div class="wrap">
       <div class="chapters-grid">
-        <div class="chapter-card reveal" onclick="location.hash='#/shop/neckpieces'" style="text-align:center; padding:34px 20px;">
+        <div class="chapter-card reveal" onclick="navigateTo('/shop/neckpieces')" style="text-align:center; padding:34px 20px;">
           <div class="product-image" style="height:120px; margin-bottom:18px;">
             <svg viewBox="0 0 100 100" fill="none" style="width:38%;">
               <path d="M50 18 C64 30 72 44 68 60 C64 76 54 84 50 92 C46 84 36 76 32 60 C28 44 36 30 50 18 Z" stroke="#d9ab5f" stroke-width="1.4"/>
@@ -496,7 +497,7 @@ fbq('track', 'PageView');
           </div>
           <h3 style="font-size:18px;">Neckpieces</h3>
         </div>
-        <div class="chapter-card reveal" onclick="location.hash='#/shop/earrings'" style="text-align:center; padding:34px 20px;">
+        <div class="chapter-card reveal" onclick="navigateTo('/shop/earrings')" style="text-align:center; padding:34px 20px;">
           <div class="product-image" style="height:120px; margin-bottom:18px;">
             <svg viewBox="0 0 100 100" fill="none" style="width:32%;">
               <circle cx="50" cy="42" r="20" stroke="#d9ab5f" stroke-width="1.4"/>
@@ -505,7 +506,7 @@ fbq('track', 'PageView');
           </div>
           <h3 style="font-size:18px;">Earrings</h3>
         </div>
-        <div class="chapter-card reveal" onclick="location.hash='#/shop/rings'" style="text-align:center; padding:34px 20px;">
+        <div class="chapter-card reveal" onclick="navigateTo('/shop/rings')" style="text-align:center; padding:34px 20px;">
           <div class="product-image" style="height:120px; margin-bottom:18px;">
             <svg viewBox="0 0 100 100" fill="none" style="width:30%;">
               <circle cx="50" cy="56" r="22" stroke="#d9ab5f" stroke-width="1.4"/>
@@ -563,7 +564,7 @@ fbq('track', 'PageView');
   <!-- ============ PRODUCT PAGE ============ -->
   <main id="page-product" class="page">
     <div class="wrap">
-      <a href="#/shop" class="cta" style="display:inline-block; margin-top:20px; font-size:14px;">← Back to Shop</a>
+      <a href="/shop" class="cta" style="display:inline-block; margin-top:20px; font-size:14px;">← Back to Shop</a>
       <div id="product-container"></div>
     </div>
   </main>
@@ -632,19 +633,19 @@ fbq('track', 'PageView');
     </div>
     <div class="fcol">
       <h5>Shop</h5>
-      <a href="#/shop/neckpieces">Neckpieces</a>
-      <a href="#/shop/earrings">Earrings</a>
-      <a href="#/shop/rings">Finger Rings</a>
-      <a href="#/shop">All Products</a>
+      <a href="/shop/neckpieces">Neckpieces</a>
+      <a href="/shop/earrings">Earrings</a>
+      <a href="/shop/rings">Finger Rings</a>
+      <a href="/shop">All Products</a>
     </div>
     <div class="fcol">
         <h5>Brand & Legal</h5>
-        <a href="#/">Home</a>
-        <a href="#/contact">Contact / Story</a>
-        <a href="#/privacy">Privacy Policy</a>
-        <a href="#/terms">Terms of Service</a>
-        <a href="#/refund">Refund Policy</a>
-        <a href="#/shipping">Shipping Policy</a>
+        <a href="/">Home</a>
+        <a href="/contact">Contact / Story</a>
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/terms">Terms of Service</a>
+        <a href="/refund">Refund Policy</a>
+        <a href="/shipping">Shipping Policy</a>
       </div>
           <div class="fcol">
         <h5>Follow</h5>
@@ -786,12 +787,12 @@ fbq('track', 'PageView');
       <div class="product-card">
         <div class="product-flip">
           <div class="product-face product-front">
-            <a href="#/product/${p.slug}" class="product-image" style="display:block; text-decoration:none;">
+            <a href="/product/${p.slug}" class="product-image" style="display:block; text-decoration:none;">
               ${imageContent}
             </a>
             <div class="product-info">
               <div class="cat">${catLabel[p.cat]}</div>
-              <a href="#/product/${p.slug}" style="text-decoration:none; color:inherit;"><h4>${p.name}</h4></a>
+              <a href="/product/${p.slug}" style="text-decoration:none; color:inherit;"><h4>${p.name}</h4></a>
               <div class="price">${p.price}</div>
               ${p.shopifyId 
                 ? `<div class="shopify-buy-container" data-shopify-id="${p.shopifyId}" style="margin-top:12px;"></div>` 
@@ -823,7 +824,7 @@ fbq('track', 'PageView');
 
   document.querySelectorAll('.filter-btn').forEach(btn=>{
     btn.addEventListener('click', ()=>{
-      location.hash = btn.dataset.filter === 'all' ? '#/shop' : '#/shop/' + btn.dataset.filter;
+      navigateTo(btn.dataset.filter === 'all' ? '/shop' : '/shop/' + btn.dataset.filter);
     });
   });
 
@@ -849,10 +850,21 @@ fbq('track', 'PageView');
     el.classList.toggle('active');
   }
 
+  function findProductBySlug(slug){
+    if (!slug) return null;
+    const s = slug.toLowerCase().trim();
+    // 1. Direct match
+    let p = products.find(x => x.slug === s);
+    if (p) return p;
+    // 2. Prefix / alias / stem match (e.g. 'medusa' -> 'medusa-earrings')
+    p = products.find(x => x.slug.startsWith(s) || s.startsWith(x.slug.split('-')[0]));
+    return p || null;
+  }
+
   function renderProductPage(slug){
-    const p = products.find(x => x.slug === slug);
+    const p = findProductBySlug(slug);
     if(!p) {
-        location.hash = '/shop';
+        navigateTo('/shop');
         return;
     }
     
@@ -976,62 +988,206 @@ fbq('track', 'PageView');
     window.scrollTo(0,0);
   }
 
-  function route(){
-    let hash = location.hash.replace('#','') || '/';
-    document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
-    document.querySelectorAll('.navlinks a').forEach(a=>a.classList.remove('active'));
-
-    if(hash === '/privacy'){
-      document.getElementById('page-privacy').classList.add('active');
-    } else if(hash === '/terms'){
-      document.getElementById('page-terms').classList.add('active');
-    } else if(hash === '/refund'){
-      document.getElementById('page-refund').classList.add('active');
-    } else if(hash === '/shipping'){
-      document.getElementById('page-shipping').classList.add('active');
-    } else if(hash.startsWith('/product/')){
-      document.getElementById('page-product').classList.add('active');
-      const slug = hash.replace('/product/', '');
-      renderProductPage(slug);
-      setTimeout(renderShopifyButtons, 100);
-    } else if(hash.startsWith('/shop')){
-      document.getElementById('page-shop').classList.add('active');
-      if(document.querySelector('[data-route="/shop"]')){
-        document.querySelector('[data-route="/shop"]').classList.add('active');
+  // ---------- Router & SEO Metadata Helpers ----------
+  function getNormalizedPath() {
+    if (typeof window === 'undefined') return '/';
+    // Legacy hash redirect support: #/shop -> /shop
+    if (window.location && window.location.hash && window.location.hash.startsWith('#/')) {
+      const hashPath = window.location.hash.slice(1);
+      if (window.history && window.history.replaceState) {
+        window.history.replaceState(null, '', hashPath);
       }
-      const parts = hash.split('/').filter(Boolean); // ['shop','neckpieces'?]
+      return hashPath;
+    }
+    let p = (window.location && window.location.pathname) ? window.location.pathname : '/';
+    if (p.length > 1 && p.endsWith('/')) p = p.slice(0, -1);
+    return p;
+  }
+
+  function navigateTo(url) {
+    if (typeof window === 'undefined') return;
+    let target = url;
+    if (target.length > 1 && target.endsWith('/')) target = target.slice(0, -1);
+    const current = (window.location && window.location.pathname) ? window.location.pathname : '/';
+    if (current !== target) {
+      if (window.history && window.history.pushState) {
+        window.history.pushState(null, '', target);
+      }
+      route();
+    }
+  }
+
+  function updateSEOMetadata(path) {
+    if (typeof document === 'undefined') return;
+    let title = pageTitles[path] || pageTitles[Object.keys(pageTitles).find(k => k !== '/' && path.startsWith(k))] || pageTitles['/'];
+    let desc = "Kahaanist crafts handcrafted brass jewelry inspired by mythology and mysticism. Shop the Medusa, Ouroboros, and Tree of Life collections.";
+
+    if (path.startsWith('/product/')) {
+      const rawSlug = path.replace('/product/', '').split('/')[0];
+      const p = findProductBySlug(rawSlug);
+      if (p) {
+        title = `${p.name} | Kahaanist Brass Jewelry`;
+        desc = `${p.name} handcrafted in solid recycled brass. ${p.quote}`;
+        updateProductSchema(p);
+      }
+    } else if (path.startsWith('/shop')) {
+      const parts = path.split('/').filter(Boolean);
       const filter = parts[1] || 'all';
       const meta = shopMeta[filter] || shopMeta.all;
-      document.getElementById('shop-eyebrow').textContent = meta.eyebrow;
-      document.getElementById('shop-title').textContent = meta.title;
-      document.getElementById('shop-desc').textContent = meta.desc;
+      desc = `${meta.title} — ${meta.desc}`;
+    }
+
+    document.title = title;
+    const descEl = document.getElementById('meta-desc') || (document.querySelector && document.querySelector('meta[name="description"]'));
+    if (descEl && typeof descEl.setAttribute === 'function') {
+      descEl.setAttribute('content', desc);
+    }
+
+    let canonical = document.querySelector ? document.querySelector('link[rel="canonical"]') : null;
+    if (!canonical && document.createElement && document.head && document.head.appendChild) {
+      canonical = document.createElement('link');
+      if (typeof canonical.setAttribute === 'function') {
+        canonical.setAttribute('rel', 'canonical');
+      }
+      document.head.appendChild(canonical);
+    }
+    if (canonical && typeof canonical.setAttribute === 'function') {
+      canonical.setAttribute('href', 'https://kahaanist.com' + (path === '/' ? '' : path));
+    }
+  }
+
+  function updateProductSchema(p) {
+    if (typeof document === 'undefined') return;
+    let schemaScript = document.getElementById('product-schema-jsonld');
+    if (!schemaScript && document.createElement && document.head && document.head.appendChild) {
+      schemaScript = document.createElement('script');
+      schemaScript.id = 'product-schema-jsonld';
+      schemaScript.type = 'application/ld+json';
+      document.head.appendChild(schemaScript);
+    }
+    if (schemaScript) {
+      const cleanPrice = p.price ? p.price.replace(/[^0-9.]/g, '') : '';
+      const isGlobal = (typeof isGlobalVisitor !== 'undefined') ? isGlobalVisitor : false;
+      schemaScript.textContent = JSON.stringify({
+        "@context": "https://schema.org/",
+        "@type": "Product",
+        "name": p.name,
+        "image": [`https://kahaanist.com/${p.img}`],
+        "description": p.story || p.quote,
+        "brand": { "@type": "Brand", "name": "Kahaanist" },
+        "material": p.materials || "Solid Recycled Brass",
+        "offers": {
+          "@type": "Offer",
+          "url": `https://kahaanist.com/product/${p.slug}`,
+          "priceCurrency": isGlobal ? "USD" : "INR",
+          "price": cleanPrice,
+          "availability": "https://schema.org/InStock"
+        }
+      }, null, 2);
+    }
+  }
+
+  function route(){
+    const path = getNormalizedPath();
+    if (document.querySelectorAll) {
+      document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+      document.querySelectorAll('.navlinks a').forEach(a=>a.classList.remove('active'));
+    }
+
+    if(path === '/privacy'){
+      const el = document.getElementById('page-privacy');
+      if (el) el.classList.add('active');
+    } else if(path === '/terms'){
+      const el = document.getElementById('page-terms');
+      if (el) el.classList.add('active');
+    } else if(path === '/refund'){
+      const el = document.getElementById('page-refund');
+      if (el) el.classList.add('active');
+    } else if(path === '/shipping'){
+      const el = document.getElementById('page-shipping');
+      if (el) el.classList.add('active');
+    } else if(path.startsWith('/product/')){
+      const el = document.getElementById('page-product');
+      if (el) el.classList.add('active');
+      const slug = path.replace('/product/', '').split('/')[0];
+      renderProductPage(slug);
+      setTimeout(renderShopifyButtons, 100);
+    } else if(path.startsWith('/shop')){
+      const el = document.getElementById('page-shop');
+      if (el) el.classList.add('active');
+      const shopNav = document.querySelector ? document.querySelector('[data-route="/shop"]') : null;
+      if(shopNav){
+        shopNav.classList.add('active');
+      }
+      const parts = path.split('/').filter(Boolean); // ['shop','neckpieces'?]
+      const filter = parts[1] || 'all';
+      const meta = shopMeta[filter] || shopMeta.all;
+      const eyebrowEl = document.getElementById('shop-eyebrow');
+      if (eyebrowEl) eyebrowEl.textContent = meta.eyebrow;
+      const titleEl = document.getElementById('shop-title');
+      if (titleEl) titleEl.textContent = meta.title;
+      const descEl = document.getElementById('shop-desc');
+      if (descEl) descEl.textContent = meta.desc;
       renderShop(filter);
       setTimeout(renderShopifyButtons, 100);
-    } else if(hash.startsWith('/contact')){
-      document.getElementById('page-contact').classList.add('active');
-      if(document.querySelector('[data-route="/contact"]')){
-        document.querySelector('[data-route="/contact"]').classList.add('active');
+    } else if(path.startsWith('/contact')){
+      const el = document.getElementById('page-contact');
+      if (el) el.classList.add('active');
+      const contactNav = document.querySelector ? document.querySelector('[data-route="/contact"]') : null;
+      if(contactNav){
+        contactNav.classList.add('active');
       }
     } else {
-      document.getElementById('page-home').classList.add('active');
-      if(document.querySelector('[data-route="/"]')){
-        document.querySelector('[data-route="/"]').classList.add('active');
+      const el = document.getElementById('page-home');
+      if (el) el.classList.add('active');
+      const homeNav = document.querySelector ? document.querySelector('[data-route="/"]') : null;
+      if(homeNav){
+        homeNav.classList.add('active');
       }
     }
 
-    document.title = pageTitles[hash] || pageTitles[Object.keys(pageTitles).find(k => hash.startsWith(k)) ] || pageTitles['/'];
-    window.scrollTo(0,0);
+    updateSEOMetadata(path);
+    if (typeof window !== 'undefined' && window.scrollTo) window.scrollTo(0,0);
     setTimeout(revealOnScroll, 50);
 
     // Track SPA Navigation in GA4 and Meta Pixel
     if (typeof gtag === 'function') {
-      gtag('config', 'G-X23C2W02PM', { 'page_path': hash });
+      gtag('config', 'G-X23C2W02PM', { 'page_path': path });
     }
     if (typeof fbq === 'function') {
       fbq('track', 'PageView');
     }
   }
-  window.addEventListener('hashchange', route);
+
+  // Global delegated click listener for internal links
+  if (typeof document !== 'undefined' && document.addEventListener) {
+    document.addEventListener('click', (e) => {
+      const a = e.target && e.target.closest ? e.target.closest('a') : null;
+      if (!a) return;
+      const href = a.getAttribute('href');
+      if (!href) return;
+      if (
+        href.startsWith('http://') || 
+        href.startsWith('https://') || 
+        href.startsWith('mailto:') || 
+        href.startsWith('tel:') || 
+        href.startsWith('#') ||
+        a.target === '_blank' ||
+        e.metaKey || e.ctrlKey || e.shiftKey || e.altKey
+      ) {
+        return;
+      }
+      if (href.startsWith('/')) {
+        e.preventDefault();
+        navigateTo(href);
+      }
+    });
+  }
+
+  if (typeof window !== 'undefined' && window.addEventListener) {
+    window.addEventListener('popstate', route);
+    window.addEventListener('hashchange', route);
+  }
   route();
 
   // Now that products[] and route() exist, init Two-Brain

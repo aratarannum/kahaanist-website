@@ -33,16 +33,17 @@ if (!scriptMatch) {
   const mockEnv = `
     let extractedProducts = [];
     const document = {
-      createElement: () => ({ async: false, src: '', onload: null }),
+      createElement: () => ({ async: false, src: '', onload: null, setAttribute: ()=>{}, classList: { add: ()=>{}, remove: ()=>{}, toggle: ()=>{} }, innerHTML: '', textContent: '' }),
       head: { appendChild: ()=>{} },
       getElementsByTagName: () => [{ appendChild: ()=>{}, addEventListener: ()=>{} }],
-      getElementById: (id) => ({ classList: { add: ()=>{}, remove: ()=>{}, toggle: ()=>{} }, innerHTML: '', textContent: '', addEventListener: ()=>{} }),
+      getElementById: (id) => ({ classList: { add: ()=>{}, remove: ()=>{}, toggle: ()=>{} }, innerHTML: '', textContent: '', addEventListener: ()=>{}, setAttribute: ()=>{} }),
       querySelectorAll: (sel) => [],
-      querySelector: (sel) => ({ classList: { add: ()=>{}, remove: ()=>{} }, addEventListener: ()=>{} }),
+      querySelector: (sel) => ({ classList: { add: ()=>{}, remove: ()=>{} }, addEventListener: ()=>{}, setAttribute: ()=>{} }),
+      addEventListener: ()=>{},
       title: ''
     };
-    const location = { hash: '', search: '' };
-    const window = { addEventListener: ()=>{}, scrollTo: ()=>{}, location: location };
+    const location = { hash: '', search: '', pathname: '/' };
+    const window = { addEventListener: ()=>{}, scrollTo: ()=>{}, location: location, history: { pushState: ()=>{}, replaceState: ()=>{} } };
     const setTimeout = ()=>{};
     const IntersectionObserver = class { observe(){} unobserve(){} };
   `;
