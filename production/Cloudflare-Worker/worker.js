@@ -314,7 +314,10 @@ export default {
       "gemini-flash-latest"
     ];
 
-    const geminiPayload = {
+    
+      const userCountry = request.headers.get("CF-IPCountry") || "IN";
+      const geminiPayload = {
+
       system_instruction: {
         parts: [{ text: SYSTEM_INSTRUCTION + "\n\nCRITICAL GEO-LOCATION INSTRUCTION:\nThe user's detected country code is: " + userCountry + ".\nIf country is 'IN', ONLY mention Domestic India Shipping (Free above Rs 2899) and NEVER mention International shipping or USD.\nIf country is NOT 'IN', ONLY mention International Shipping (Free above US $65) and NEVER mention India domestic shipping or INR." }]
       },
