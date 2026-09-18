@@ -1022,6 +1022,14 @@ fbq('track', 'PageView');
     document.title = pageTitles[hash] || pageTitles[Object.keys(pageTitles).find(k => hash.startsWith(k)) ] || pageTitles['/'];
     window.scrollTo(0,0);
     setTimeout(revealOnScroll, 50);
+
+    // Track SPA Navigation in GA4 and Meta Pixel
+    if (typeof gtag === 'function') {
+      gtag('config', 'G-X23C2W02PM', { 'page_path': hash });
+    }
+    if (typeof fbq === 'function') {
+      fbq('track', 'PageView');
+    }
   }
   window.addEventListener('hashchange', route);
   route();
