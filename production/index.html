@@ -239,6 +239,10 @@ fbq('track', 'PageView');
   }
 
   .logo span{ color:var(--brass-light); }
+  .logo-container { display: flex; flex-direction: column; align-items: flex-start; }
+  .logo-tagline { font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 400; letter-spacing: 0.15em; color: var(--parchment-dim); margin-top: 2px; }
+  .logo-container:hover .logo-tagline { color: var(--brass-light); transition: color 0.3s; }
+
 
   .navlinks{ display:flex; align-items:center; gap:34px; font-size:14px; letter-spacing:0.03em; }
 
@@ -886,7 +890,10 @@ fbq('track', 'PageView');
 
   <nav class="wrap">
 
-    <a href="/" class="logo">KAHAANI<span>ST</span></a>
+    <a href="/" class="logo-container" style="text-decoration:none;">
+      <div class="logo">KAHAANI<span>ST</span></div>
+      <div class="logo-tagline">WEARABLE LORE.</div>
+    </a>
 
     <div class="navlinks">
 
@@ -926,37 +933,7 @@ fbq('track', 'PageView');
 
 
 
-  <section class="hero">
-
-    <div class="wrap hero-inner">
-
-      <div class="hero-inner-content">
-
-        <div class="eyebrow">HANDCRAFTED BRASS JEWELRY</div>
-
-        <h1>Wearable Lore.</h1>
-
-        
-
-      </div>
-
-    </div>
-
-    <svg class="hero-motif" viewBox="0 0 200 200" fill="none">
-
-      <circle cx="100" cy="100" r="98" stroke="#b8863b" stroke-opacity="0.35"/>
-
-      <path d="M100 30 C130 55 145 90 100 170 C55 90 70 55 100 30 Z" stroke="#d9ab5f" stroke-opacity="0.5"/>
-
-      <path d="M100 170 C60 150 40 110 55 70 C70 90 60 130 100 170 Z" stroke="#2f4a3e" stroke-opacity="0.5"/>
-
-      <path d="M100 170 C140 150 160 110 145 70 C130 90 140 130 100 170 Z" stroke="#2f4a3e" stroke-opacity="0.5"/>
-
-      <circle cx="100" cy="100" r="60" stroke="#efe6d3" stroke-opacity="0.12"/>
-
-    </svg>
-
-  </section>
+  
 
 
 
