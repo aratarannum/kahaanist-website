@@ -11,4 +11,3 @@
 
 ## Future Milestones
 - **SEO Optimization:** Implement history API routing (instead of hash routing) if indexability becomes a priority.
-- **Analytics:** Inject Meta Pixel and Google Analytics directly into the headless router.
