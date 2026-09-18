@@ -859,7 +859,7 @@ fbq('track', 'PageView');
         let countryName = localStorage.getItem('geo_country_name');
         
         if (!countryCode) {
-          const res = await fetch('https://ipapi.co/json/');
+          const res = await fetch('https://kahaanist-chatbot.ara-tarannum.workers.dev/geo');
           if (!res.ok) throw new Error("API Limit");
           const data = await res.json();
           if (data.error || !data.country_code) throw new Error("Invalid Data");
@@ -1337,7 +1337,7 @@ fbq('track', 'PageView');
       let code = localStorage.getItem('geo_country_code');
       if (code) return code;
       
-      const resp = await fetch('https://ipapi.co/json/', { signal: AbortSignal.timeout(3000) });
+      const resp = await fetch('https://kahaanist-chatbot.ara-tarannum.workers.dev/geo', { signal: AbortSignal.timeout(3000) });
       if (!resp.ok) throw new Error("Rate limited");
       const data = await resp.json();
       if (data.error || !data.country_code) throw new Error("Invalid response");

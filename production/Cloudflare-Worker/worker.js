@@ -160,7 +160,7 @@ export default {
   async fetch(request, env, ctx) {
     const corsHeaders = {
       "Access-Control-Allow-Origin": "*",
-      "Access-Control-Allow-Methods": "POST, OPTIONS",
+      "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
       "Access-Control-Allow-Headers": "Content-Type",
       "Content-Type": "application/json"
     };
@@ -171,6 +171,17 @@ export default {
     }
 
     const url = new URL(request.url);
+
+    // ----------------------------------------------------
+    // NEW: Cloudflare Native Geo-IP Endpoint
+    // ----------------------------------------------------
+    if (request.method === "GET" && url.pathname === "/geo") {
+      // CF-IPCountry is automatically injected by Cloudflare's network
+      const countryCode = request.headers.get("CF-IPCountry") || "IN";
+      return new Response(JSON.stringify({ country_code: countryCode }), { 
+        headers: { ...corsHeaders, "Content-Type": "application/json", "Cache-Control": "no-store" } 
+      });
+    }
 
     // ----------------------------------------------------
     // NEW: Newsletter / Leads Subscribe Endpoint
@@ -231,7 +242,7 @@ export default {
     }
 
     if (request.method !== "POST") {
-      return new Response(JSON.stringify({ error: "Method not allowed. Use POST /chat or /subscribe" }), {
+      return new Response(JSON.stringify({ error: "Method not allowed. Use GET /geo, or POST /chat or /subscribe" }), {
         status: 405,
         headers: corsHeaders
       });
