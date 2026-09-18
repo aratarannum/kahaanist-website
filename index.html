@@ -424,6 +424,7 @@ fbq('track', 'PageView');
 </head>
 <body>
 
+<header>
 <div id="geo-banner" style="background: var(--brass-light); color: var(--ink); text-align: center; padding: 8px 16px; font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 500; letter-spacing: 0.1em; display: none; width: 100%;"></div>
 <script>
   fetch('https://ipapi.co/json/')
@@ -438,8 +439,6 @@ fbq('track', 'PageView');
       banner.style.display = 'block';
     }).catch(() => {});
 </script>
-
-<header>
   <nav class="wrap">
     <a href="#/" class="logo">KAHAANI<span>ST</span></a>
     <div class="navlinks">
