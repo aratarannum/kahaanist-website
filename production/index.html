@@ -298,7 +298,7 @@ fbq('track', 'PageView');
   footer h5{ font-size:13px; letter-spacing:0.1em; color:var(--brass-light); text-transform:uppercase; margin-bottom:18px; }
   footer .fcol a{ display:block; font-size:14px; color:var(--parchment-dim); margin-bottom:10px; }
   footer .fcol a:hover{ color:var(--brass-light); }
-  .newsletter-row{ display:flex; gap:0; margin-top:8px; border-bottom:1px solid var(--line); padding-bottom:8px; max-width:280px; }
+  .newsletter-row{ display:flex; align-items:center; gap:8px; margin-top:8px; border-bottom:1px solid var(--line); padding-bottom:8px; max-width:280px; }
   .newsletter-row input{ background:transparent; border:none; outline:none; color:var(--parchment); font-size:14px; flex:1; }
   .newsletter-row button{ background:none; border:none; color:var(--brass-light); font-size:13px; cursor:pointer; }
   .footer-bottom{
@@ -946,7 +946,7 @@ fbq('track', 'PageView');
                 ? `<div class="shopify-buy-container" data-shopify-id="${p.shopifyId}"></div>` 
                 : `<div class="btn btn-primary" style="opacity:0.5; cursor:not-allowed;">Product currently unavailable</div>`
             }
-            <div style="font-size:13px; color:var(--parchment-dim); text-align:center; margin-top:12px;">${isGlobalVisitor ? 'Secure checkout. International shipping included.' : 'Secure checkout. Free shipping across India.'}</div>
+              <div style="font-size:13px; color:var(--parchment-dim); text-align:left; margin-top:12px;">${isGlobalVisitor ? 'Secure checkout. International shipping included.' : 'Secure checkout. Free shipping across India.'}</div>
           </div>
 
           <div class="product-story">
