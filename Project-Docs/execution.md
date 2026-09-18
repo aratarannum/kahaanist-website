@@ -11,3 +11,6 @@ We have upgraded the test suite to not only check for syntax errors, but also to
 
 ## 3. The "Visual State" Rule
 Because we are headless, any structural UI change (like moving the Add to Cart button or altering the video gallery) must be tested on both Mobile and Desktop viewports mentally by the AI before deployment. Mobile-first stacking (where videos push buttons below the fold) must always be accounted for.
+
+## 4. The "Customer Ready" Rule
+NEVER publish or commit features that are not fully customer-ready. For example, do not embed client-side code that fetches from localhost (like local LLMs) as this will fail on a customer's device. If a feature has blockers preventing it from being customer-ready, it must be disabled or kept in a branch. You must explicitly list the blockers and resolve them with the user through direction and approvals before pushing to production.
