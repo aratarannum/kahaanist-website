@@ -193,6 +193,35 @@ export default {
         }));
 
         console.log(`[LEAD_CAPTURE] Saved new lead to KV database: ${email} | ${phone}`);
+
+        // --- KLAVIYO INTEGRATION ---
+        if (email !== "no-email") {
+          ctx.waitUntil(
+            fetch('https://a.klaviyo.com/client/subscriptions/?company_id=Vxi4aX', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json', 'revision': '2024-02-15' },
+              body: JSON.stringify({
+                data: {
+                  type: "subscription",
+                  attributes: { 
+                    custom_source: "Website_Join_Modal", 
+                    profile: { 
+                      data: { 
+                        type: "profile", 
+                        attributes: { 
+                          email: email,
+                          ...(phone !== "no-phone" && { phone_number: phone })
+                        } 
+                      } 
+                    } 
+                  },
+                  relationships: { list: { data: { type: "list", id: "XtyGg5" } } }
+                }
+              })
+            }).catch(e => console.error("Klaviyo push failed:", e))
+          );
+        }
+
         return new Response(JSON.stringify({ success: true, message: "Welcome to the lore." }), { 
           headers: { ...corsHeaders, "Content-Type": "application/json" } 
         });

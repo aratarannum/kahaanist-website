@@ -859,30 +859,37 @@ fbq('track', 'PageView');
 <div id="geo-banner" style="background: var(--brass-light); color: var(--ink); text-align: center; padding: 8px 16px; font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 500; letter-spacing: 0.1em; display: none; width: 100%;"></div>
 
 <script>
-
-  fetch('https://ipapi.co/json/')
-
-    .then(res => res.json())
-
-    .then(data => {
-
+    async function initGeoBanner() {
       const banner = document.getElementById('geo-banner');
+      try {
+        let countryCode = localStorage.getItem('geo_country_code');
+        let countryName = localStorage.getItem('geo_country_name');
+        
+        if (!countryCode) {
+          const res = await fetch('https://ipapi.co/json/');
+          if (!res.ok) throw new Error("API Limit");
+          const data = await res.json();
+          if (data.error || !data.country_code) throw new Error("Invalid Data");
+          
+          countryCode = data.country_code;
+          countryName = data.country_name;
+          localStorage.setItem('geo_country_code', countryCode);
+          if (countryName) localStorage.setItem('geo_country_name', countryName);
+        }
 
-      if (data.country_code === 'IN') {
-
-        banner.innerText = 'Handcrafted across India. Free Domestic Shipping.';
-
-      } else {
-
-        banner.innerText = 'Handcrafted in India. Express Shipping to ' + (data.country_name || 'your country') + '.';
-
+        if (countryCode === 'IN') {
+          banner.innerText = 'Handcrafted across India. Free Domestic Shipping.';
+        } else {
+          banner.innerText = 'Handcrafted in India. Free shipping to ' + (countryName || 'your location') + '.';
+        }
+        banner.style.display = 'block';
+      } catch (err) {
+        banner.innerText = 'Handcrafted in India. Free shipping worldwide.';
+        banner.style.display = 'block';
       }
-
-      banner.style.display = 'block';
-
-    }).catch(() => {});
-
-</script>
+    }
+    initGeoBanner();
+  </script>
 
   <nav class="wrap">
 
@@ -1333,16 +1340,24 @@ fbq('track', 'PageView');
   // Geo-IP detection
 
   async function detectCountry() {
-
     try {
-
+      let code = localStorage.getItem('geo_country_code');
+      if (code) return code;
+      
       const resp = await fetch('https://ipapi.co/json/', { signal: AbortSignal.timeout(3000) });
-
+      if (!resp.ok) throw new Error("Rate limited");
       const data = await resp.json();
-
+      if (data.error || !data.country_code) throw new Error("Invalid response");
+      
+      localStorage.setItem('geo_country_code', data.country_code);
+      if (data.country_name) localStorage.setItem('geo_country_name', data.country_name);
+      
       return data.country_code;
-
     } catch(e) {
+      console.warn("Geo-IP failed, defaulting to IN.", e);
+      return 'IN';
+    }
+  } catch(e) {
 
       return 'IN';
 
