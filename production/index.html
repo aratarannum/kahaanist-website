@@ -826,7 +826,16 @@ fbq('track', 'PageView');
 
 
 
-</style>
+
+  /* Force Shopify Buy Button to center */
+  .shopify-buy-container, .shopify-buy-container iframe {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    display: block !important;
+  }
+
+  </style>
 
 </head>
 
@@ -1532,7 +1541,7 @@ fbq('track', 'PageView');
 
               ${p.shopifyId 
 
-                ? `<div class="shopify-buy-container" data-shopify-id="${p.shopifyId}" style="margin-top:auto; padding-top:12px; display:flex; justify-content:center; width:100%;"></div>` 
+                ? `<div class="shopify-buy-container" data-shopify-id="${p.shopifyId}" style="margin-top:auto; padding-top:12px; width:100%; text-align:center;"></div>` 
 
                 : `<div class="cta" style="margin-top:auto; padding-top:12px; color:var(--parchment-dim);">Coming Soon</div>`
 
@@ -2698,7 +2707,16 @@ fbq('track', 'PageView');
 
   }
 
-</style>
+
+  /* Force Shopify Buy Button to center */
+  .shopify-buy-container, .shopify-buy-container iframe {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    display: block !important;
+  }
+
+  </style>
 
 
 
@@ -3011,7 +3029,16 @@ fbq('track', 'PageView');
   background: rgba(184, 134, 59, 0.1);
   border-color: var(--brass-light);
 }
-</style>
+
+  /* Force Shopify Buy Button to center */
+  .shopify-buy-container, .shopify-buy-container iframe {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    display: block !important;
+  }
+
+  </style>
 
 <script>
   let autoCloseTimer = null;
