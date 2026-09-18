@@ -2943,7 +2943,12 @@ fbq('track', 'PageView');
 <!-- Join Modal -->
 <div id="join-modal" class="modal-overlay">
   <div class="modal-content">
-    <button class="modal-close" onclick="closeJoinModal()"></button>
+    <button class="modal-close" onclick="closeJoinModal()" aria-label="Close modal">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
     <h3>Join the Coven</h3>
     <p>Sign up to get early access to new mythological releases, exclusive lore, and brand updates.</p>
     <form id="join-modal-form">
@@ -2995,14 +3000,23 @@ fbq('track', 'PageView');
 }
 .modal-close {
   position: absolute;
-  top: 16px; right: 20px;
-  background: none; border: none;
-  color: var(--parchment-dim);
-  font-size: 28px;
+  top: 12px; right: 12px;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: var(--parchment);
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
   cursor: pointer;
-  line-height: 1;
+  transition: all 0.2s;
+  z-index: 10;
 }
-.modal-close:hover { color: var(--brass-light); }
+.modal-close:hover { 
+  background: var(--brass-dark); 
+  color: #fff;
+  border-color: var(--brass-light);
+  transform: rotate(90deg);
+}
 .modal-content h3 {
   color: var(--brass-light);
   font-size: 22px;
@@ -3060,13 +3074,28 @@ fbq('track', 'PageView');
 </style>
 
 <script>
+  let autoCloseTimer = null;
   function openJoinModal() {
     document.getElementById('join-modal').classList.add('active');
     localStorage.setItem('kahaanist_popup_seen', 'true');
+    
+    // Auto-dismiss after 10 seconds
+    autoCloseTimer = setTimeout(() => {
+      closeJoinModal();
+    }, 10000);
   }
   function closeJoinModal() {
     document.getElementById('join-modal').classList.remove('active');
+    if (autoCloseTimer) clearTimeout(autoCloseTimer);
   }
+
+  // Cancel auto-dismiss if user starts typing
+  document.getElementById('join-email').addEventListener('input', () => {
+    if (autoCloseTimer) clearTimeout(autoCloseTimer);
+  });
+  document.getElementById('join-phone').addEventListener('input', () => {
+    if (autoCloseTimer) clearTimeout(autoCloseTimer);
+  });
   
   // Optional delayed auto-popup for lead generation
   window.addEventListener('load', () => {
