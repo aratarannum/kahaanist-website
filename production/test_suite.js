@@ -66,7 +66,7 @@ if (!scriptMatch) {
         let schemaErrors = 0;
         parsedProducts.forEach((p, i) => {
             if (!p.name) { console.error(`❌ Product at index ${i} is missing a 'name'.`); schemaErrors++; }
-            if (!p.price) { console.error(`❌ Product '${p.name || i}' is missing a 'price'.`); schemaErrors++; }
+            if (!p.price && !p.priceGlobal) { console.error(`❌ Product '${p.name || i}' is missing a 'price'.`); schemaErrors++; }
             if (!p.slug) { console.error(`❌ Product '${p.name || i}' is missing a 'slug'.`); schemaErrors++; }
         });
         if(schemaErrors === 0){
