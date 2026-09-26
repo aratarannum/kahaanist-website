@@ -890,8 +890,8 @@ fbq('track', 'PageView');
     <div class="navlinks">
 
       <a href="/" data-route="/">Home</a>
-
       
+      <a href="/shop" data-route="/shop">Shop</a>
 
       <a href="/contact" data-route="/contact">Contact</a>
 
@@ -958,8 +958,6 @@ fbq('track', 'PageView');
       <div class="filter-btn" data-filter="neckpieces">Neckpieces</div>
 
       <div class="filter-btn" data-filter="earrings">Earrings</div>
-
-      <div class="filter-btn" data-filter="rings">Finger Rings</div>
 
     </div>
 
@@ -1437,7 +1435,7 @@ fbq('track', 'PageView');
 
     { slug:'mermaids-in-love-pendant', cat:'neckpieces', name:'Mermaids in Love Pendant Necklace', price:'₹2,899', quote:'A subtle nod to infinite romance.', gallery: [], img:'Mermaids-in-love-black.png', shopifyId: '8742905446583', shopifyIdGlobal: '9412330586345', priceGlobal: 'US$65', story: 'Reflecting the gentle and protective nature of the ocean\'s guardians, this pendant symbolizes a quiet but infinite romance. Designed for those who carry the sea in their hearts.', materials: 'Solid Recycled Brass.', size: 'Pendant diameter: 30mm. Chain length: 20 inches.', shipping: 'Free shipping across India. 7-day hassle-free replacement.' },
 
-    { slug:'ouroboros-pendant', cat:'neckpieces', gallery: ['ouroboros-pendant.mp4'], name:'Ouroboros Pendant Necklace', price:'₹2,899', quote:'A cycle you wear, not just believe in.', img:'Ouroboros-black.png', shopifyId: '8742904332471', shopifyIdGlobal: '9412331962601', priceGlobal: 'US$65', story: 'The Ouroboros—a serpent eating its own tail—is one of the oldest mystical symbols in the world. It represents eternity, the cycle of life and death, and constant recreation. This ring is cast to wrap continuously around your finger as a daily talisman of renewal.', materials: 'Solid Recycled Brass.', size: 'Available in US sizes 5 through 9.', shipping: 'Free shipping across India. 7-day hassle-free replacement.' },
+    { slug:'ouroboros-pendant', cat:'neckpieces', gallery: ['ouroboros-pendant.mp4'], name:'Ouroboros Pendant Necklace', price:'₹2,899', quote:'A cycle you wear, not just believe in.', img:'Ouroboros-black.png', shopifyId: '8742904332471', shopifyIdGlobal: '9412331962601', priceGlobal: 'US$65', story: 'The Ouroboros—a serpent eating its own tail—is one of the oldest mystical symbols in the world. It represents eternity, the cycle of life and death, and constant recreation. This pendant is cast as a heavy, continuous loop to rest near your heart, serving as a daily talisman of renewal.', materials: 'Solid Recycled Brass.', size: 'Pendant diameter: 35mm. Chain length: 20 inches.', shipping: 'Free shipping across India. 7-day hassle-free replacement.' },
 
   ];
 
@@ -2311,87 +2309,90 @@ fbq('track', 'PageView');
 
   // ---------- Newsletter form (CRM) ----------
 
-  document.getElementById('newsletter-form').addEventListener('submit', async (e) => {
+  const newsletterForm = document.getElementById('newsletter-form');
+  if (newsletterForm) {
+    newsletterForm.addEventListener('submit', async (e) => {
 
-    e.preventDefault();
+      e.preventDefault();
 
-    const email = document.getElementById('newsletter-email').value;
+      const email = document.getElementById('newsletter-email').value;
 
-    const msg = document.getElementById('newsletter-msg');
+      const msg = document.getElementById('newsletter-msg');
 
-    msg.style.color = "var(--brass-light)";
+      msg.style.color = "var(--brass-light)";
 
-    msg.textContent = "Loading...";
+      msg.textContent = "Loading...";
 
-    try {
+      try {
 
-      // ----------------------------------------------------
+        // ----------------------------------------------------
 
-      // KLAVIYO INTEGRATION:
+        // KLAVIYO INTEGRATION:
 
-      // ----------------------------------------------------
+        // ----------------------------------------------------
 
-      const res = await fetch('https://a.klaviyo.com/client/subscriptions/?company_id=Vxi4aX', {
+        const res = await fetch('https://a.klaviyo.com/client/subscriptions/?company_id=Vxi4aX', {
 
-        method: 'POST',
+          method: 'POST',
 
-        headers: { 'Content-Type': 'application/json', 'revision': '2024-02-15' },
+          headers: { 'Content-Type': 'application/json', 'revision': '2024-02-15' },
 
-        body: JSON.stringify({
+          body: JSON.stringify({
 
-          data: {
+            data: {
 
-            type: "subscription",
+              type: "subscription",
 
-            attributes: { 
+              attributes: { 
 
-              custom_source: "Website_Footer", 
+                custom_source: "Website_Footer", 
 
-              profile: { 
+                profile: { 
 
-                data: { 
+                  data: { 
 
-                  type: "profile", 
+                    type: "profile", 
 
-                  attributes: { email: email } 
+                    attributes: { email: email } 
+
+                  } 
 
                 } 
 
-              } 
+              },
 
-            },
+              relationships: { list: { data: { type: "list", id: "XtyGg5" } } }
 
-            relationships: { list: { data: { type: "list", id: "XtyGg5" } } }
+            }
 
-          }
+          })
 
-        })
+        });
 
-      });
+        
 
-      
+        if(res.ok || res.status === 202) {
 
-      if(res.ok || res.status === 202) {
+          msg.textContent = "Welcome to the legend. Check your inbox for your 10% off code.";
 
-        msg.textContent = "Welcome to the legend. Check your inbox for your 10% off code.";
+        } else {
 
-      } else {
+          msg.textContent = "Welcome to the legend. Check your inbox for your 10% off code."; // Graceful fallback
 
-        msg.textContent = "Welcome to the legend. Check your inbox for your 10% off code."; // Graceful fallback
+        }
+
+      } catch(err) {
+
+        // If backend is offline, simulate success for UX
+
+        msg.textContent = "Welcome to the legend. Use code MYTH10 for 10% off.";
+
+        console.log("Saved locally (server offline):", email);
 
       }
 
-    } catch(err) {
-
-      // If backend is offline, simulate success for UX
-
-      msg.textContent = "Welcome to the legend. Use code MYTH10 for 10% off.";
-
-      console.log("Saved locally (server offline):", email);
-
-    }
-
-  });
+    });
+  }
 
 </script>
 
