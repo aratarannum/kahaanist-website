@@ -869,7 +869,6 @@ fbq('track', 'PageView');
     justify-content: center;
     text-align: center;
     background: url('medusacloseup.png') center/cover no-repeat;
-    margin-top: -85px; /* Pull up under transparent header */
   }
   .hero::after {
     content: '';
@@ -934,13 +933,7 @@ fbq('track', 'PageView');
     opacity: 0.5;
   }
 
-  /* Adjust header to sit transparently over hero initially */
-  header {
-    background: transparent !important;
-    border-bottom: none !important;
-    position: relative;
-    z-index: 10;
-  }
+
 
   </style>
 
@@ -3135,13 +3128,13 @@ fbq('track', 'PageView');
   });
   
   // Optional delayed auto-popup for lead generation
-  window.addEventListener('load', () => {
+  document.addEventListener('DOMContentLoaded', () => {
     if (!localStorage.getItem('kahaanist_popup_seen')) {
       setTimeout(() => {
         if (!document.getElementById('join-modal').classList.contains('active')) {
           openJoinModal();
         }
-      }, 12000); // 12 seconds
+      }, 5000); // 5 seconds
     }
   });
 
