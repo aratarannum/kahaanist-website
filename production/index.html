@@ -1929,7 +1929,27 @@ fbq('track', 'PageView');
 
             }
 
-              <div style="font-size:13px; color:var(--parchment-dim); text-align:left; margin-top:12px;">${isGlobalVisitor ? 'Secure checkout. International shipping included.' : 'Secure checkout. Free shipping across India.'}</div>
+
+              <!-- Trust Badges -->
+              <div style="margin-top:24px; padding-top:20px; border-top:1px solid var(--line); display:flex; flex-direction:column; gap:12px;">
+                <div style="display:flex; align-items:center; gap:12px;">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brass-light)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                  <span style="font-size:13px; color:var(--parchment-dim);">Secure checkout via Razorpay</span>
+                </div>
+                <div style="display:flex; align-items:center; gap:12px;">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brass-light)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+                  <span style="font-size:13px; color:var(--parchment-dim);">${isGlobalVisitor ? 'Free international shipping' : 'Free shipping across India'}</span>
+                </div>
+                <div style="display:flex; align-items:center; gap:12px;">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brass-light)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                  <span style="font-size:13px; color:var(--parchment-dim);">Solid Recycled Brass</span>
+                </div>
+                <div style="display:flex; align-items:center; gap:12px;">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brass-light)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+                  <span style="font-size:13px; color:var(--parchment-dim);">Nickel-Free & Hypoallergenic</span>
+                </div>
+              </div>
+
 
           </div>
 
