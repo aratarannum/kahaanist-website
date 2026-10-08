@@ -1479,6 +1479,14 @@ fbq('track', 'PageView');
 
       product: {
 
+        DOMEvents: {
+          'click .shopify-buy__btn': function(e, target) {
+            if (typeof gtag === 'function') {
+              gtag('event', 'add_to_cart');
+            }
+          }
+        },
+
         contents: { img: false, title: false, price: false },
 
         text: { button: 'Add to Cart' },
@@ -1509,6 +1517,14 @@ fbq('track', 'PageView');
       },
 
       cart: { 
+
+        DOMEvents: {
+          'click .shopify-buy__btn--cart-checkout': function(e, target) {
+            if (typeof gtag === 'function') {
+              gtag('event', 'begin_checkout');
+            }
+          }
+        },
 
         text: { total: 'Subtotal', button: 'Checkout' },
           googleFonts: ['Cinzel'],
@@ -1560,7 +1576,7 @@ fbq('track', 'PageView');
   const products = [
     { slug:'tree-of-life-pendant', cat:'neckpieces', tag:'Bestseller', gallery: ['tree-of-life-2.png', 'tree-of-life.mp4'], name:'Tree of Life Pendant Necklace', price:'₹2,899', quote:'Roots below, branches above - grounded and growing at once.', img:'tree-of-life-black.png', shopifyId: '8742902792375', shopifyIdGlobal: '9412329701609', priceGlobal: 'US$65', story: 'The Tree of Life is an ancient symbol found in mythologies from the Norse Yggdrasil to the Celtic Crann Bethadh. It represents the interconnectedness of everything in the universe. We cast this piece in solid brass to give you a wearable reminder to stay grounded in your roots while reaching for what is next.', materials: 'Solid Recycled Brass, 18K Gold Plated finish.', size: 'Pendant diameter: 25mm. Chain length: 18 inches with a 2-inch extender.', shipping: 'Free shipping across India. 7-day hassle-free replacement for any defects.' },
 
-    { slug:'medusa-earrings', cat:'earrings', gallery: ['Medusa-earrings-model-wearing.png', 'medusa-earrings.mp4'], name:'Medusa Earrings', price:'₹4,499', quote:'A gaze that stops time.', img:'Medusa-earrings-black.png', shopifyId: '8733191569591', shopifyIdGlobal: '9412325867753', priceGlobal: 'US$99', story: 'Long misunderstood as a monster, Medusa was originally a protector and a symbol of female rage and power. Her visage was placed on shields and temples to ward off evil. We designed these earrings for the days you need to channel her fierce, unapologetic energy.', materials: 'Solid Recycled Brass. Hypoallergenic posts.', size: 'Drop length: 45mm. Width: 30mm.', shipping: 'Free shipping across India. 7-day hassle-free replacement.' },
+    { slug:'medusa-earrings', cat:'earrings', gallery: ['Medusa-earrings-model-wearing.png', 'medusa-earrings.mp4'], name:'Medusa Earrings', price:'₹3,499', quote:'A gaze that stops time.', img:'Medusa-earrings-black.png', shopifyId: '8733191569591', shopifyIdGlobal: '9412325867753', priceGlobal: 'US$99', story: 'Long misunderstood as a monster, Medusa was originally a protector and a symbol of female rage and power. Her visage was placed on shields and temples to ward off evil. We designed these earrings for the days you need to channel her fierce, unapologetic energy.', materials: 'Solid Recycled Brass. Hypoallergenic posts.', size: 'Drop length: 45mm. Width: 30mm.', shipping: 'Free shipping across India. 7-day hassle-free replacement.' },
 
     { slug:'ouroboros-pendant', cat:'neckpieces', gallery: ['ouroboros-pendant.mp4'], name:'Ouroboros Pendant Necklace', price:'₹2,899', quote:'A cycle you wear, not just believe in.', img:'Ouroboros-black.png', shopifyId: '8742904332471', shopifyIdGlobal: '9412331962601', priceGlobal: 'US$65', story: 'The Ouroboros-a serpent eating its own tail-is one of the oldest mystical symbols in the world. It represents eternity, the cycle of life and death, and constant recreation. This pendant is cast as a heavy, continuous loop to rest near your heart, serving as a daily talisman of renewal.', materials: 'Solid Recycled Brass.', size: 'Pendant diameter: 35mm. Chain length: 20 inches.', shipping: 'Free shipping across India. 7-day hassle-free replacement.' },
 
