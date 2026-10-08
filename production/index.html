@@ -1479,11 +1479,9 @@ fbq('track', 'PageView');
 
       product: {
 
-        DOMEvents: {
-          'click .shopify-buy__btn': function(e, target) {
-            if (typeof gtag === 'function') {
-              gtag('event', 'add_to_cart');
-            }
+        events: {
+          addVariantToCart: function(product) {
+            if (typeof gtag === 'function') gtag('event', 'add_to_cart');
           }
         },
 
@@ -1518,11 +1516,9 @@ fbq('track', 'PageView');
 
       cart: { 
 
-        DOMEvents: {
-          'click .shopify-buy__btn--cart-checkout': function(e, target) {
-            if (typeof gtag === 'function') {
-              gtag('event', 'begin_checkout');
-            }
+        events: {
+          openCheckout: function(cart) {
+            if (typeof gtag === 'function') gtag('event', 'begin_checkout');
           }
         },
 
@@ -3204,9 +3200,11 @@ fbq('track', 'PageView');
       msgDiv.innerText = 'Connection error. Please try again later.';
     }
   });
+
 </script>
 
 </body>
+
 </html>
 
 
